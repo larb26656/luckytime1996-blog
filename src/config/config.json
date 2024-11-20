@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Lucktime1996",
-    "base_url": "https://bookworm-light-astro.vercel.app",
-    "base_path": "/",
+    "base_url": "https://larb26656.github.io",
+    "base_path": "luckytime1996-blog",
     "trailing_slash": false,
     "favicon": "/images/favicon.svg",
     "logo": "/images/logo.svg",
