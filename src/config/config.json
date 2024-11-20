@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "Lucktime1996",
+    "base_url": "https://bookworm-light-astro.vercel.app",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.svg",
+    "logo": "/images/logo.svg",
+    "logo_width": "200",
+    "logo_height": "34",
+    "logo_text": "Lucktime1996"
+  },
+
+  "settings": {
+    "pagination": 5,
+    "summary_length": 100
+  },
+
+  "metadata": {
+    "meta_author": "Luckytime1996",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "A simple blog for developers"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2024 Lucktime1996"
+  },
+
+  "contactinfo": {
+    "address": "355 S Grand Ave <br/> Los Angeles, CA 90071",
+    "email": "info@bookworm.org",
+    "phone": "+800 567 1234"
+  }
+}
