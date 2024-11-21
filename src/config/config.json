@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Lucktime1996",
+    "title": "Luckytime1996",
     "base_url": "https://blog.luckytime1996.dev",
     "base_path": "/",
     "trailing_slash": false,
@@ -8,7 +8,7 @@
     "logo": "/images/logo.svg",
     "logo_width": "200",
     "logo_height": "34",
-    "logo_text": "Lucktime1996"
+    "logo_text": "Luckytime1996"
   },
 
   "settings": {
@@ -24,7 +24,7 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © 2024 Lucktime1996"
+    "copyright": "Copyright © 2024 Luckytime1996"
   },
 
   "contactinfo": {
