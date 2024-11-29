@@ -36,17 +36,10 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           name: build
           path: ./dist
-
-      # - name: Install, build, and upload your site
-      #   uses: withastro/action@v3
-      #   with:
-      #     path: .
-      #     node-version: 20
-      #     package-manager: npm@latest
 
   deploy:
     needs: build
