@@ -21,12 +21,32 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          path: .
           node-version: 20
-          package-manager: npm@latest
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright with dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: ./dist
+
+      # - name: Install, build, and upload your site
+      #   uses: withastro/action@v3
+      #   with:
+      #     path: .
+      #     node-version: 20
+      #     package-manager: npm@latest
 
   deploy:
     needs: build
