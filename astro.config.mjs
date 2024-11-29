@@ -7,6 +7,7 @@ import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
+import remarkMermaid from "remark-mermaidjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,6 +45,7 @@ export default defineConfig({
           test: "Table of contents",
         },
       ],
+      remarkMermaid,
     ],
     shikiConfig: {
       theme: "one-dark-pro",
