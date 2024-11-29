@@ -1,7 +1,7 @@
 ---
 title: "I’m Luckytime1996, a Full Stack Developer passionate about crafting software."
 meta_title: "About"
-image: "/images/author.png"
+image: "/images/author.webp"
 draft: false
 
 what_i_do:
