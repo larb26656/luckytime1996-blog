@@ -136,5 +136,5 @@ Observability ในบริบทของ Software Development หมาย�
 
 Ref:
 
-https://docs.spring.io/spring-cloud-sleuth/docs/2.2.x-SNAPSHOT/reference/html/
-https://www.crowdstrike.com/en-us/cybersecurity-101/observability/three-pillars-of-observability/
+- https://docs.spring.io/spring-cloud-sleuth/docs/2.2.x-SNAPSHOT/reference/html/
+- https://www.crowdstrike.com/en-us/cybersecurity-101/observability/three-pillars-of-observability/
