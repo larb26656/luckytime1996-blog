@@ -1,7 +1,8 @@
 ---
-title: มาลอง Debug Http Request ในฝั่ง Backend กัน
+title: มาลอง Debug HTTP request ในฝั่ง Backend กัน
 date: 2025-02-09T01:50:00Z
 categories: ["article"]
+image: "/images/posts/04/thumbnail.jpg"
 tags: ["java", "debug", "proxy", "http request", "mitmproxy"]
 draft: false
 ---
