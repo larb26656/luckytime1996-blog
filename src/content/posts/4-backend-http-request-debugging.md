@@ -202,7 +202,7 @@ Mitmproxy
 
 โดย Default JAVA จะสามารถตั้งค่า HTTP proxy ได้ผ่านทาง VM Option ซึ่งในขั้นตอนนี้ผมจะสาธิตการตั้งค่า VM Option ด้วย IDE intelij
 
-ไปที่เมนู `RUN > Edit configurations` จะเมนูการตั้งค่าการ Run ดังภาพ
+ไปที่เมนู `RUN > Edit configurations` จะปรากฎเมนูการตั้งค่าการ Run ดังภาพ
 
 <p align="center">
   <img src="/images/posts/04/image 5.png" />
