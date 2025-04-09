@@ -167,7 +167,7 @@ Swagger คือชุดเครื่องมือที่ช่วยใ
     </style>
   </head>
   <body>
-    <redoc spec-url="v3/api-docs"></redoc>
+    <redoc spec-url="/v3/api-docs"></redoc>
     <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   </body>
 </html>
@@ -196,7 +196,7 @@ Swagger คือชุดเครื่องมือที่ช่วยใ
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <script id="api-reference" data-url="v3/api-docs"></script>
+    <script id="api-reference" data-url="/v3/api-docs"></script>
     <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
   </body>
 </html>
