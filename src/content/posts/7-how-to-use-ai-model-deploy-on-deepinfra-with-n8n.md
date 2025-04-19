@@ -23,7 +23,7 @@ DeepInfra เป็นแพลตฟอร์มที่ให้บริก�
   <img src="/images/posts/07/image.png" />
 </p>
 
-**2. เลือก Provider เป็น "OpenAI Chat Model"**
+**2. เลือก Language Model เป็น "OpenAI Chat Model"**
 
 <p align="center">
   <img src="/images/posts/07/image 1.png" />
