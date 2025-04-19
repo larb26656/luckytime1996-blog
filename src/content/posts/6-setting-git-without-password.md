@@ -11,7 +11,9 @@ draft: false
 
 บทความนี้จะแนะนำวิธีการใช้ SSH key เพื่อ Authenticate กับ Git Server โดยไม่ต้องกรอก Password ทุกครั้ง
 
-## 1. ตรวจสอบว่าเคยมี SSH Key หรือยัง
+## Create SSH Key
+
+**1. ตรวจสอบว่าเคยมี SSH Key หรือยัง**
 
 เปิด Terminal และรันคำสั่ง:
 
@@ -21,7 +23,7 @@ ls -al ~/.ssh
 
 หากคุณเห็นไฟล์ชื่อ `id_rsa` และ `id_rsa.pub` แสดงว่าคุณมี SSH key อยู่แล้ว สามารถข้ามไปยังขั้นตอนที่ 3 ได้เลย
 
-## 2. สร้าง SSH Key ใหม่
+**2. สร้าง SSH Key ใหม่**
 
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -40,32 +42,9 @@ ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
 - หากต้องการความปลอดภัยสูงสุด ควรตั้ง Passphrase
 - หากไม่ต้องการใส่ Password ทุกครั้ง ให้กด Enter เพื่อข้ามขั้นตอนนี้
 
-## 3. เพิ่ม Public key ไปยัง Git server
+## วิธีการทำงานของ SSH Authentication ใน Git
 
-โดยในบทความนี้ผมจะขอยกตัวอย่างการเพิ่ม Public key ลงไปใน Github ส่วน Git provider อื่นๆ ก็จะใช้วิธีคล้ายๆกัน
-
-1. เข้าสู่ Github แล้วไปที่เมนู `Settings > SSH and GPG keys`
-2. คลิกปุ่ม New SSH key เพื่อเพิ่ม key
-
-<p align="center">
-  <img src="/images/posts/06/image.png" />
-</p>
-
-คัดลอก Public key:
-
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-
-3. ตั้งชื่อ Key และวาง Public key ที่คัดลอกมาลงในช่อง Key จากนั้นคลิกปุ่ม "Add SSH Key"
-
-<p align="center">
-  <img src="/images/posts/06/image 1.png" />
-</p>
-
-## 4. วิธีการทำงานของ SSH Authentication ใน Git
-
-เรามาดูกันว่า SSH ทำงานกับ Git ยังไงกันแน่ ทำไมถึงสะดวกและปลอดภัยกว่าการใส่ Password ทุกครั้ง แผนภาพนี้จะช่วยให้เข้าใจภาพรวมการทำงานได้ง่ายขึ้นครับ
+ก่อนที่จะไปเชื่อม SSH key กับ Git เรามาดูกันว่า SSH ทำงานกับ Git ยังไงกันแน่ ทำไมถึงสะดวกและปลอดภัยกว่าการใส่ Password ทุกครั้ง แผนภาพนี้จะช่วยให้เข้าใจภาพรวมการทำงานได้ง่ายขึ้นครับ
 
 ```mermaid
 sequenceDiagram
@@ -96,7 +75,32 @@ sequenceDiagram
     end
 ```
 
-## 5. ทดลอง Clone Repository
+## เชื่อม SSH key กับ Git
+
+**1. เพิ่ม Public key ไปยัง Git server**
+
+โดยในบทความนี้ผมจะขอยกตัวอย่างการเพิ่ม Public key ลงไปใน Github ส่วน Git provider อื่นๆ ก็จะใช้วิธีคล้ายๆกัน
+
+- เข้าสู่ Github แล้วไปที่เมนู `Settings > SSH and GPG keys`
+- คลิกปุ่ม New SSH key เพื่อเพิ่ม key
+
+<p align="center">
+  <img src="/images/posts/06/image.png" />
+</p>
+
+คัดลอก Public key:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+**2. ตั้งชื่อ Key และวาง Public key ที่คัดลอกมาลงในช่อง Key จากนั้นคลิกปุ่ม "Add SSH Key"**
+
+<p align="center">
+  <img src="/images/posts/06/image 1.png" />
+</p>
+
+**3. ทดลอง Clone Repository**
 
 ไปที่ Repository ที่ต้องการ คลิกปุ่ม Clone เลือก Tab SSH แล้วคัดลอก URL ไป Clone:
 
