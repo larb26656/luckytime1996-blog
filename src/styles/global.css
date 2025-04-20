@@ -3,6 +3,7 @@
 @import "tailwindcss";
 
 @import "./markdown.css";
+@import "./container.css";
 
 @theme {
   --color-primary: #5f4644;
@@ -15,5 +16,5 @@
   --text-lg: 20px;
   --text-md: 16px;
   --text-sm: 14px;
-  --font-heading: "IBM Plex Mono", "IBM Plex Sans Thai", sans-serif;
+  --font-primary: "IBM Plex Mono", "IBM Plex Sans Thai", sans-serif;
 }

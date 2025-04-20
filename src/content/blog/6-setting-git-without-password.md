@@ -1,5 +1,6 @@
 ---
 title: Setting Git แบบไม่ต้องใช้ Password
+description: "เมื่อใช้งาน Git ผ่าน Command Line เรามักจะต้องกรอก Password ทุกครั้งที่มีการ Push, Pull หรือ Clone ซึ่งนอกจากจะไม่สะดวกแล้ว การบันทึก Password ไว้ในเครื่องก็อาจมีความเสี่ยงด้านความปลอดภัย"
 date: 2025-04-15T21:54:00Z
 type: "Article"
 image: "/images/posts/06/thumbnail.jpg"
@@ -13,7 +14,7 @@ draft: false
 
 ## Create SSH Key
 
-**1. ตรวจสอบว่าเคยมี SSH Key หรือยัง**
+1. ตรวจสอบว่าเคยมี SSH Key หรือยัง
 
 เปิด Terminal และรันคำสั่ง:
 
@@ -23,7 +24,7 @@ ls -al ~/.ssh
 
 หากคุณเห็นไฟล์ชื่อ `id_rsa` และ `id_rsa.pub` แสดงว่าคุณมี SSH key อยู่แล้ว สามารถข้ามไปยังขั้นตอนที่ 3 ได้เลย
 
-**2. สร้าง SSH Key ใหม่**
+2. สร้าง SSH Key ใหม่
 
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -77,7 +78,7 @@ sequenceDiagram
 
 ## เชื่อม SSH key กับ Git
 
-**1. เพิ่ม Public key ไปยัง Git server**
+1. เพิ่ม Public key ไปยัง Git server
 
 โดยในบทความนี้ผมจะขอยกตัวอย่างการเพิ่ม Public key ลงไปใน Github ส่วน Git provider อื่นๆ ก็จะใช้วิธีคล้ายๆกัน
 
@@ -94,13 +95,13 @@ sequenceDiagram
 cat ~/.ssh/id_ed25519.pub
 ```
 
-**2. ตั้งชื่อ Key และวาง Public key ที่คัดลอกมาลงในช่อง Key จากนั้นคลิกปุ่ม "Add SSH Key"**
+2. ตั้งชื่อ Key และวาง Public key ที่คัดลอกมาลงในช่อง Key จากนั้นคลิกปุ่ม "Add SSH Key"
 
 <p align="center">
   <img src="/images/posts/06/image 1.png" />
 </p>
 
-**3. ทดลอง Clone Repository**
+3. ทดลอง Clone Repository
 
 ไปที่ Repository ที่ต้องการ คลิกปุ่ม Clone เลือก Tab SSH แล้วคัดลอก URL ไป Clone:
 

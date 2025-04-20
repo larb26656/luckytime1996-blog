@@ -10,26 +10,30 @@ interface Props {
 
 const {
   id,
-  data: { title, date, type, description },
+  data: { title, image, date, type, description },
 } = Astro.props.post;
 ---
 
-<div class="flex flex-col p-4 gap-4">
-  <Typo variant="h3" color="secondary">
-    <a href={`/blog/${id}/`}>{title}</a></Typo
-  >
+<div class="flex items-start p-4 gap-4">
+  {image && <img class="rounded-md w-[200px]" src={image} alt="" />}
+  <div class="flex-1 flex flex-col gap-2">
+    <Typo variant="h3" color="secondary">
+      <a href={`/blog/${id}/`}>{title}</a></Typo
+    >
 
-  <div class="flex gap-2">
-    <Typo variant="small" color="tertiary"><FormattedDate date={date} /></Typo>
-    {
-      type && (
-        <Typo variant="small" color="tertiary">
-          {type || "-"}
-        </Typo>
-      )
-    }
+    <div class="flex gap-2">
+      <Typo variant="small" color="tertiary"><FormattedDate date={date} /></Typo
+      >
+      {
+        type && (
+          <Typo variant="small" color="tertiary">
+            {type || "-"}
+          </Typo>
+        )
+      }
+    </div>
+    <Typo variant="normal">
+      {description}
+    </Typo>
   </div>
-  <Typo variant="normal">
-    {description}
-  </Typo>
 </div>

@@ -1,5 +1,6 @@
 ---
 title: มาลอง Debug HTTP request ในฝั่ง Backend กัน
+description: "เมื่อเราต้องเชื่อมต่อกับ API ภายนอกโดยใช้ HTTP request เราจะมั่นใจได้อย่างไรว่าข้อมูลที่เราส่งไปนั้นถูกต้อง? เช่น Payload, Header ที่ส่งไป"
 date: 2025-02-09T01:50:00Z
 type: "Article"
 image: "/images/posts/04/thumbnail.jpg"

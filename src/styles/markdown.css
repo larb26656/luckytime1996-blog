@@ -1,11 +1,11 @@
 .markdown {
   @apply text-dark;
-  @apply font-heading;
+  /* @apply font-primary; */
 
   h1,
   h2,
   h3 {
-    @apply font-heading font-semibold py-2;
+    @apply font-primary font-semibold mb-4;
   }
 
   h1 {
@@ -21,17 +21,35 @@
   }
 
   p {
-    @apply py-4;
+    @apply mb-4;
+  }
+
+  a {
+    @apply text-primary underline hover:no-underline hover:text-secondary;
+  }
+
+  pre {
+    @apply bg-secondary text-light p-4 rounded-lg overflow-x-auto font-mono text-sm leading-relaxed my-4;
+
+    code {
+      @apply bg-transparent;
+    }
+  }
+
+  code {
+    @apply bg-gray-200 px-1 py-0.5 rounded;
   }
 
   ol {
     list-style-type: decimal;
     margin-left: 1.5em;
+    @apply mb-4;
   }
 
   ul {
     list-style-type: none;
     padding-left: 1em;
+    @apply mb-4;
 
     li::before {
       content: "- ";
@@ -45,24 +63,14 @@
   }
 
   blockquote {
-    margin: 1em 0;
-    padding: 0.75em 1em;
-    border-left: 4px solid #ccc;
-    background-color: #f9f9f9;
-    font-style: italic;
-    color: #555;
-  }
-
-  /* Convert blockquote to Tailwind CSS */
-  blockquote {
     @apply m-4 p-4 pl-6 border-l-4 border-gray-300 bg-gray-100 italic text-gray-700;
+
+    p {
+      @apply mb-0;
+    }
   }
 
   hr {
     @apply border-0 border-t-2 border-dotted border-gray-400 my-12;
-  }
-
-  pre {
-    @apply bg-secondary text-light p-4 rounded-lg overflow-x-auto font-mono text-sm leading-relaxed my-4;
   }
 }

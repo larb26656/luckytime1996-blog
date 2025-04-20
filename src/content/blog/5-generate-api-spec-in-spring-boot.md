@@ -1,5 +1,6 @@
 ---
 title: แนวทางการทำ API Spec ใน Spring boot
+description: "เมื่อเราเริ่มพัฒนา API Server ไม่ว่าจะเพื่อให้ Frontend หรือ Third-party เข้ามาเชื่อมต่อกับระบบ สิ่งสำคัญที่ขาดไม่ได้คือ เอกสาร API Specification เพื่อระบุว่า API ของเรามี Endpoint อะไรบ้าง รับส่งข้อมูลอย่างไร และต้องใช้รูปแบบใดในการเรียกใช้งาน"
 date: 2025-04-07T00:06:00Z
 type: "Article"
 image: "/images/posts/05/thumbnail.jpg"
@@ -30,7 +31,7 @@ draft: false
 
 ## ทดลองสร้าง API Spec แบบเร็วๆ
 
-1. สร้าง Project Spring boot โดยใช้ [https://start.spring.io](https://start.spring.io) จากนั้นทำการเลือก **Dependencies Spring Web, Lombok**
+1. สร้าง Project Spring boot โดยใช้ [https://start.spring.io](https://start.spring.io) จากนั้นทำการเลือก Dependencies Spring Web, Lombok
 
 <p align="center">
   <img src="/images/posts/05/image 1.png" />
