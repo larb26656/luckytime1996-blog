@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@import "./markdown.css";
+
 @theme {
   --color-primary: #5f4644;
   --color-secondary: #161d2e;

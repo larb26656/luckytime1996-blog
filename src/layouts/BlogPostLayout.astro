@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import Typo from "../components/Typo.astro";
+import MainLayout from "./MainLayout.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, heroImage, type } = Astro.props;
+---
+
+<MainLayout title={title} description={description}>
+  <article>
+    <Typo variant="h1" color="primary">{title}</Typo>
+    <div class="flex gap-2">
+      <Typo variant="small" color="tertiary"
+        ><FormattedDate date={pubDate} /></Typo
+      >
+      {
+        type && (
+          <Typo variant="small" color="tertiary">
+            {type || "-"}
+          </Typo>
+        )
+      }
+    </div>
+    <div class="flex justify-center p-4">
+      {heroImage && <img class="rounded-md h-[225px]" src={heroImage} alt="" />}
+    </div>
+    <div class="markdown">
+      <slot />
+    </div>
+  </article>
+</MainLayout>

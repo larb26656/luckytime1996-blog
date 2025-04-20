@@ -1,7 +1,4 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getAllPosts } from "../lib/repo/post.repo";
 import PostList from "../components/post/PostList.astro";
 import Typo from "../components/Typo.astro";
@@ -11,13 +8,13 @@ const newPosts = await getAllPosts({
   sort: {
     date: "DESC",
   },
-  page: {
-    limit: 5,
+  criteria: {
+    type: "Article",
   },
 });
 ---
 
-<MainLayout title="Home">
-  <Typo variant="h2" , color="primary">> New</Typo>
+<MainLayout title="Article">
+  <Typo variant="h2" color="primary">> New</Typo>
   <PostList posts={newPosts} />
 </MainLayout>

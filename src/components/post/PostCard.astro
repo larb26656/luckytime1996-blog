@@ -23,7 +23,13 @@ const {
     <Typo variant="small" color="tertiary"
       ><FormattedDate date={pubDate} /></Typo
     >
-    <Typo variant="small" color="tertiary">{type || "-"}</Typo>
+    {
+      type && (
+        <Typo variant="small" color="tertiary">
+          {type || "-"}
+        </Typo>
+      )
+    }
   </div>
   <Typo variant="normal">
     {description}
