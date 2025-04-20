@@ -6,8 +6,10 @@ import NavigatorBarLink from "./NavigatoBarLink.astro";
 
 <header>
   <nav class="main-container flex justify-center p-4 gap-4">
-    <Typo variant="h3" color="primary"><a href="/">{SITE_TITLE}</a></Typo>
-    <div class="flex justify-end gap-x-4 flex-1">
+    <Typo variant="h3" color="primary" class="!mb-0"
+      ><a href="/">{SITE_TITLE}</a></Typo
+    >
+    <div class="flex justify-end items-center gap-x-4 flex-1">
       <NavigatorBarLink href="/">Home</NavigatorBarLink>
       <NavigatorBarLink href="/article">Article</NavigatorBarLink>
       <NavigatorBarLink href="/bite">Bite</NavigatorBarLink>

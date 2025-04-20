@@ -7,6 +7,7 @@ interface Props {
   color?: Color;
   variant?: Variant;
   font?: Font;
+  class?: string;
 }
 
 const colorToClass = {
@@ -26,12 +27,22 @@ const variantMap = {
   tertiary: { size: "text-sm", weight: "font-normal", font: "font-primary" },
 };
 
-const { color = "dark", variant = "normal", font: overideFont } = Astro.props;
+const {
+  color = "dark",
+  variant = "normal",
+  font: overideFont,
+  class: propClassName,
+} = Astro.props;
 
 const { size, weight, font } = variantMap[variant] ?? variantMap["normal"];
 const colorClass = colorToClass[color] ?? "text-dark";
 
-const classes = [overideFont || font, colorClass, size, weight];
+const classes = [overideFont || font, colorClass, size, weight, "mb-2"];
+
+if (propClassName) {
+  classes.push(propClassName);
+}
+
 const className = classes.join(" ");
 ---
 
