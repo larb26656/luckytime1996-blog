@@ -53,7 +53,7 @@ function sortPosts(blogs: PostEntry[], sort: PostFilterSort): PostEntry[] {
   const { date } = sort;
 
   if (date) {
-    blogs = sortBy(blogs, (blog) => blog.data.pubDate.valueOf(), "ASC");
+    blogs = sortBy(blogs, (blog) => blog.data.date.valueOf(), date);
   }
 
   return blogs;

@@ -1,10 +1,11 @@
 .markdown {
   @apply text-dark;
+  @apply font-heading;
 
   h1,
   h2,
   h3 {
-    @apply font-heading font-semibold;
+    @apply font-heading font-semibold py-2;
   }
 
   h1 {
@@ -17,5 +18,51 @@
 
   h3 {
     @apply text-secondary text-lg;
+  }
+
+  p {
+    @apply py-4;
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin-left: 1.5em;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 1em;
+
+    li::before {
+      content: "- ";
+      position: absolute;
+      margin-left: -1em;
+    }
+
+    li {
+      position: relative;
+    }
+  }
+
+  blockquote {
+    margin: 1em 0;
+    padding: 0.75em 1em;
+    border-left: 4px solid #ccc;
+    background-color: #f9f9f9;
+    font-style: italic;
+    color: #555;
+  }
+
+  /* Convert blockquote to Tailwind CSS */
+  blockquote {
+    @apply m-4 p-4 pl-6 border-l-4 border-gray-300 bg-gray-100 italic text-gray-700;
+  }
+
+  hr {
+    @apply border-0 border-t-2 border-dotted border-gray-400 my-12;
+  }
+
+  pre {
+    @apply bg-secondary text-light p-4 rounded-lg overflow-x-auto font-mono text-sm leading-relaxed my-4;
   }
 }

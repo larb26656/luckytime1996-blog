@@ -10,7 +10,7 @@ interface Props {
 
 const {
   id,
-  data: { title, pubDate, type, description },
+  data: { title, date, type, description },
 } = Astro.props.post;
 ---
 
@@ -20,9 +20,7 @@ const {
   >
 
   <div class="flex gap-2">
-    <Typo variant="small" color="tertiary"
-      ><FormattedDate date={pubDate} /></Typo
-    >
+    <Typo variant="small" color="tertiary"><FormattedDate date={date} /></Typo>
     {
       type && (
         <Typo variant="small" color="tertiary">

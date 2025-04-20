@@ -6,15 +6,14 @@ import MainLayout from "./MainLayout.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, heroImage, type } = Astro.props;
+const { title, description, date, image, type } = Astro.props;
 ---
 
 <MainLayout title={title} description={description}>
   <article>
     <Typo variant="h1" color="primary">{title}</Typo>
     <div class="flex gap-2">
-      <Typo variant="small" color="tertiary"
-        ><FormattedDate date={pubDate} /></Typo
+      <Typo variant="small" color="tertiary"><FormattedDate date={date} /></Typo
       >
       {
         type && (
@@ -25,7 +24,7 @@ const { title, description, pubDate, heroImage, type } = Astro.props;
       }
     </div>
     <div class="flex justify-center p-4">
-      {heroImage && <img class="rounded-md h-[225px]" src={heroImage} alt="" />}
+      {image && <img class="rounded-md h-[225px]" src={image} alt="" />}
     </div>
     <div class="markdown">
       <slot />
