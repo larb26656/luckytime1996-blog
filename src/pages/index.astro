@@ -1,28 +1,35 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getAllPosts } from '../lib/repo/post.repo';
-import PostList from '../components/PostList.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getAllPosts } from "../lib/repo/post.repo";
+import PostList from "../components/post/PostList.astro";
+import Typo from "../components/Typo.astro";
+import NavigatiorBar from "../components/navigator-bar/NavigatiorBar.astro";
 
 const newPosts = await getAllPosts({
-	sort: {
-		date: "DESC"
-	}
+  sort: {
+    date: "DESC",
+  },
+  page: {
+    limit: 5,
+  },
 });
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<PostList posts={newPosts}/>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <section class="min-h-screen">
+      <NavigatiorBar />
+      <main class="container mx-auto py-20">
+        <Typo variant="h2" , color="primary">> New</Typo>
+        <PostList posts={newPosts} />
+      </main>
+    </section>
+    <Footer />
+  </body>
 </html>

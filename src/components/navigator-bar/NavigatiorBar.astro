@@ -1,17 +1,17 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
-import Typo from "./Typo.astro";
+import { SITE_TITLE } from "../../consts";
+import Typo from "../Typo.astro";
+import NavigatorBarLink from "./NavigatoBarLink.astro";
 ---
 
 <header>
   <nav class="container mx-auto flex justify-center p-4 gap-4">
     <Typo variant="h3" color="primary"><a href="/">{SITE_TITLE}</a></Typo>
     <div class="flex justify-end gap-x-4 flex-1">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/article">Article</HeaderLink>
-      <HeaderLink href="/bite">Bite</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
+      <NavigatorBarLink href="/">Home</NavigatorBarLink>
+      <NavigatorBarLink href="/article">Article</NavigatorBarLink>
+      <NavigatorBarLink href="/bite">Bite</NavigatorBarLink>
+      <NavigatorBarLink href="/about">About</NavigatorBarLink>
     </div>
     <!-- <div class="flex justify-center gap-x-4 flex-1">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">

@@ -1,0 +1,77 @@
+---
+type Color = "primary" | "secondary" | "tertiary" | "dark" | "light";
+type Variant = "h1" | "h2" | "h3" | "normal" | "small" | "tertiary";
+
+interface Props {
+  color?: Color;
+  variant?: Variant;
+}
+
+const colorToClass = {
+  primary: "text-primary",
+  secondary: "text-secondary",
+  tertiary: "text-tertiary",
+  dark: "text-dark",
+  light: "text-light",
+};
+
+const variantMap = {
+  h1: { size: "text-2xl", weight: "font-semibold", font: "font-heading" },
+  h2: { size: "text-xl", weight: "font-semibold", font: "font-heading" },
+  h3: { size: "text-lg", weight: "font-semibold", font: "font-heading" },
+  normal: { size: "text-md", weight: "font-normal", font: "font-heading" },
+  small: { size: "text-sm", weight: "font-light", font: "font-heading" },
+  tertiary: { size: "text-sm", weight: "font-normal", font: "font-heading" },
+};
+
+const { color = "dark", variant = "normal" } = Astro.props;
+
+const { size, weight, font } = variantMap[variant] ?? variantMap["normal"];
+const colorClass = colorToClass[color] ?? "text-dark";
+
+const classes = [font, colorClass, size, weight];
+const className = classes.join(" ");
+---
+
+{
+  (() => {
+    switch (variant) {
+      case "h1":
+        return (
+          <h1 class={className}>
+            <slot />
+          </h1>
+        );
+      case "h2":
+        return (
+          <h2 class:list={className}>
+            <slot />
+          </h2>
+        );
+      case "h3":
+        return (
+          <h3 class={className}>
+            <slot />
+          </h3>
+        );
+      case "small":
+        return (
+          <small class={className}>
+            <slot />
+          </small>
+        );
+      case "tertiary":
+        return (
+          <span class={className}>
+            <slot />
+          </span>
+        );
+      default:
+        return (
+          <p class={className}>
+            <slot />
+          </p>
+        );
+    }
+  })()
+}

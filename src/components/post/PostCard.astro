@@ -1,0 +1,31 @@
+---
+import { type CollectionEntry } from "astro:content";
+import FormattedDate from "../FormattedDate.astro";
+import Typo from "../Typo.astro";
+type PostEntry = CollectionEntry<"blog">;
+
+interface Props {
+  post: PostEntry;
+}
+
+const {
+  id,
+  data: { title, pubDate, type, description },
+} = Astro.props.post;
+---
+
+<div class="flex flex-col p-4 gap-4">
+  <Typo variant="h3" color="secondary">
+    <a href={`/blog/${id}/`}>{title}</a></Typo
+  >
+
+  <div class="flex gap-2">
+    <Typo variant="small" color="tertiary"
+      ><FormattedDate date={pubDate} /></Typo
+    >
+    <Typo variant="small" color="tertiary">{type || "-"}</Typo>
+  </div>
+  <Typo variant="normal">
+    {description}
+  </Typo>
+</div>
