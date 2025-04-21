@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-dark font-content;
+  @apply text-dark font-content text-md/loose;
 
   h1,
   h2,

@@ -45,7 +45,7 @@ draft: false
 
 ดังนั้น Hero ที่จะเข้ามาช่วยแก้ไขปัญหานี้ก็คือ Observability นั่นเองครับ! ✨
 
-# Observability
+## Observability
 
 <p align="center">
   <img src="/images/posts/03/dota-2-ward.webp" />

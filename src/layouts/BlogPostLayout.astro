@@ -11,7 +11,7 @@ const { title, description, date, image, type } = Astro.props;
 
 <MainLayout title={title} description={description}>
   <article>
-    <Typo variant="h1" color="primary">{title}</Typo>
+    <Typo variant="h2" color="primary">{title}</Typo>
     <div class="flex gap-2">
       <Typo variant="small" color="tertiary"><FormattedDate date={date} /></Typo
       >
