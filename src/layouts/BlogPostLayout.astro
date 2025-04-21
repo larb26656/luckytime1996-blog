@@ -24,7 +24,11 @@ const { title, description, date, image, type } = Astro.props;
       }
     </div>
     <div class="flex justify-center p-4">
-      {image && <img class="rounded-md h-[225px]" src={image} alt="" />}
+      {
+        image && (
+          <img class="rounded-md w-full lg:w-[500px]" src={image} alt="" />
+        )
+      }
     </div>
     <div class="markdown">
       <slot />

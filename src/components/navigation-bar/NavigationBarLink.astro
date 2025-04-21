@@ -10,11 +10,13 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
 ---
 
-<Typo variant="normal" color="dark" font="font-primary" class="!mb-0">
-  <a href={href} class:list={[className, { active: isActive }]} {...props}>
-    <slot />
-  </a>
-</Typo>
+<li>
+  <Typo variant="normal" color="dark" font="font-primary" class="!mb-0">
+    <a href={href} class:list={[className, { active: isActive }]} {...props}>
+      <slot />
+    </a>
+  </Typo>
+</li>
 <style>
   a {
     display: inline-block;

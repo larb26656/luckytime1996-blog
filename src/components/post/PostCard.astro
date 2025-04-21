@@ -14,8 +14,14 @@ const {
 } = Astro.props.post;
 ---
 
-<div class="flex items-start p-4 gap-4">
-  {image && <img class="rounded-md w-[200px]" src={image} alt="" />}
+<div class="flex flex-col items-start p-4 gap-4 lg:flex-row">
+  {
+    image && (
+      <a href={`/blog/${id}/`}>
+        <img class="rounded-md w-full lg:w-[200px]" src={image} alt="" />
+      </a>
+    )
+  }
   <div class="flex-1 flex flex-col">
     <Typo variant="h3" color="secondary">
       <a href={`/blog/${id}/`}>{title}</a></Typo

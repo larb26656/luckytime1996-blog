@@ -1,0 +1,32 @@
+---
+import { SITE_TITLE } from "../../consts";
+import Typo from "../Typo.astro";
+import NavigationBarLink from "./NavigationBarLink.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<nav
+  class="main-container flex justify-start items-center lg:justify-center p-4 gap-4"
+>
+  <a class="p-2 lg:hidden" href="#menu">
+    <Icon class="text-xl" name="ic:round-menu" />
+  </a>
+  <Typo variant="h3" color="primary" class="!mb-0"
+    ><a href="/">{SITE_TITLE}</a></Typo
+  >
+  <ul
+    id="menu"
+    class="flex flex-col items-center justify-start gap-x-4 p-4 flex-1 list-none bg-light
+  -translate-y-full [#menu:target]:translate-y-0 fixed inset-0 z-[1000] ease-in-out
+  transition-transform duration-300
+  lg:p-0 lg:flex-row lg:justify-end lg:bg-transparent lg:static lg:inset-auto lg:z-auto lg:translate-y-0"
+  >
+    <NavigationBarLink href="/">Home</NavigationBarLink>
+    <NavigationBarLink href="/article">Article</NavigationBarLink>
+    <NavigationBarLink href="/bite">Bite</NavigationBarLink>
+    <NavigationBarLink href="/about">About</NavigationBarLink>
+    <a class="fixed top-0 right-0 p-4 lg:hidden" href="#">
+      <Icon class="text-xl" name="ic:sharp-close" />
+    </a>
+  </ul>
+</nav>
