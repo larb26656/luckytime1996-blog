@@ -5,6 +5,7 @@ import Typo from "@/components/Typo.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { buildPaginationParams } from "@/lib/utils/pagination";
 import Pagination from "@/components/Pagination.astro";
+import FortuneCookie from "@/components/FortuneCookie";
 
 const allPosts = await getAllPosts({
   sort: {
@@ -30,4 +31,5 @@ const {
       basePath: "/blog/page",
     }}
   />
+  <FortuneCookie client:load />
 </MainLayout>

@@ -7,13 +7,15 @@ import icon from "astro-icon";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import react from "@astrojs/react";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [mdx(), sitemap(), icon()],
+  integrations: [mdx(), sitemap(), icon(), react()],
   vite: {
     plugins: [tailwindcss()],
     resolve: {
