@@ -19,7 +19,7 @@ export default function FortuneCookie() {
       {fortuneMessage && (
         <motion.p
           key={fortuneMessage}
-          className="text-primary font-primary"
+          className="text-primary font-primary text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
