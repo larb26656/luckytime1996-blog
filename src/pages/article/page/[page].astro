@@ -1,0 +1,38 @@
+---
+import Pagination from "../../../components/Pagination.astro";
+import PostList from "../../../components/post/PostList.astro";
+import Typo from "../../../components/Typo.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { getAllPosts } from "../../../lib/repo/post.repo";
+import { buildPaginationParams } from "../../../lib/utils/pagination";
+
+export async function getStaticPaths() {
+  const allPosts = await getAllPosts({
+    criteria: {
+      // TODO make this type safe?
+      type: "Article",
+    },
+    sort: {
+      date: "DESC",
+    },
+  });
+
+  const pageSize = 5;
+  return buildPaginationParams(allPosts, pageSize);
+}
+
+const { page } = Astro.params;
+const { items, previousPage, nextPage } = Astro.props;
+---
+
+<MainLayout title={`Article page ${page}`}>
+  <Typo variant="h2" color="primary">> Article</Typo>
+  <PostList posts={items} />
+  <Pagination
+    previousPage={previousPage}
+    nextPage={nextPage}
+    option={{
+      basePath: "/article/page",
+    }}
+  />
+</MainLayout>

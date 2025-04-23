@@ -1,23 +1,33 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getAllPosts } from "../lib/repo/post.repo";
 import PostList from "../components/post/PostList.astro";
 import Typo from "../components/Typo.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import { buildPaginationParams } from "../lib/utils/pagination";
+import Pagination from "../components/Pagination.astro";
 
-const newPosts = await getAllPosts({
+const allPosts = await getAllPosts({
   sort: {
     date: "DESC",
   },
-  page: {
-    limit: 10,
-  },
 });
+
+const pageSize = 5;
+
+const pageParams = buildPaginationParams(allPosts, pageSize);
+const {
+  props: { items, previousPage, nextPage },
+} = pageParams[0];
 ---
 
 <MainLayout title="Home">
   <Typo variant="h2" , color="primary">> New</Typo>
-  <PostList posts={newPosts} />
+  <PostList posts={items} />
+  <Pagination
+    previousPage={previousPage}
+    nextPage={nextPage}
+    option={{
+      basePath: "/blog/page",
+    }}
+  />
 </MainLayout>

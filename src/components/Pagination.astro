@@ -1,0 +1,32 @@
+---
+import Typo from "./Typo.astro";
+
+interface Props {
+  previousPage?: number;
+  nextPage?: number;
+  option: {
+    basePath: string;
+  }
+}
+
+const { previousPage, nextPage, option: { basePath} } = Astro.props;
+---
+
+<div class="flex gap-2 p-4">
+  <div class="flex-1 flex justify-start">
+    {
+      previousPage ? (
+        <a href={`${basePath}/${previousPage}`}>
+          <Typo variant="small", color="primary">&lt;&lt; Previous page</Typo>
+        </a>
+      ) : (
+        <p />
+      )
+    }
+  </div>
+  <div class="flex-1 flex justify-end">
+    {nextPage ? <a href={`${basePath}/${nextPage}`}>
+        <Typo variant="small", color="primary">Next page &gt;&gt;</Typo>
+        </a> : <p />}
+  </div>
+</div>

@@ -1,0 +1,32 @@
+---
+import Pagination from "../../../components/Pagination.astro";
+import PostList from "../../../components/post/PostList.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { getAllPosts } from "../../../lib/repo/post.repo";
+import { buildPaginationParams } from "../../../lib/utils/pagination";
+
+export async function getStaticPaths() {
+  const allPosts = await getAllPosts({
+    sort: {
+      date: "DESC",
+    },
+  });
+
+  const pageSize = 5;
+  return buildPaginationParams(allPosts, pageSize);
+}
+
+const { page } = Astro.params;
+const { items, previousPage, nextPage } = Astro.props;
+---
+
+<MainLayout title=`Blog page ${page}`>
+  <PostList posts={items} />
+  <Pagination
+    previousPage={previousPage}
+    nextPage={nextPage}
+    option={{
+      basePath: "/blog/page",
+    }}
+  />
+</MainLayout>
