@@ -1,23 +1,22 @@
 ---
-import { type CollectionEntry } from 'astro:content';
-// import FormattedDate from './FormattedDate.astro';
-import PostCard from './PostCard.astro';
+import { type CollectionEntry } from "astro:content";
+import PostCard from "./PostCard.astro";
 
 type PostEntry = CollectionEntry<"blog">;
 
 interface Props {
-	posts: PostEntry[]
+  posts: PostEntry[];
 }
-
 ---
+
 <section>
-	<ul>
-		{
-			Astro.props.posts.map((post) => (
-				<li>
-					<PostCard post={post}></PostCard>
-				</li>
-			))
-		}
-	</ul>
+  <ul>
+    {
+      Astro.props.posts.map((post) => (
+        <li>
+          <PostCard post={post} />
+        </li>
+      ))
+    }
+  </ul>
 </section>

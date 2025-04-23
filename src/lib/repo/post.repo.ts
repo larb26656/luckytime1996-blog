@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import { sortBy, type OrderDirection } from "../utils/sort";
+import { sortBy, type OrderDirection } from "@/lib/utils/sort";
 
 type PostEntry = CollectionEntry<"blog">;
 

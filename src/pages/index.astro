@@ -1,10 +1,10 @@
 ---
-import { getAllPosts } from "../lib/repo/post.repo";
-import PostList from "../components/post/PostList.astro";
-import Typo from "../components/Typo.astro";
-import MainLayout from "../layouts/MainLayout.astro";
-import { buildPaginationParams } from "../lib/utils/pagination";
-import Pagination from "../components/Pagination.astro";
+import { getAllPosts } from "@/lib/repo/post.repo";
+import PostList from "@/components/post/PostList.astro";
+import Typo from "@/components/Typo.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import { buildPaginationParams } from "@/lib/utils/pagination";
+import Pagination from "@/components/Pagination.astro";
 
 const allPosts = await getAllPosts({
   sort: {
