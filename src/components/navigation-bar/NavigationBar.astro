@@ -11,9 +11,12 @@ import { Icon } from "astro-icon/components";
   <a class="p-2 lg:hidden" href="#menu">
     <Icon class="text-xl" name="ic:round-menu" />
   </a>
-  <Typo variant="h3" color="primary" class="!mb-0"
-    ><a href="/">{SITE_TITLE}</a></Typo
-  >
+  <div class="flex justify-center gap-2">
+    <img src="/images/favicon.png" class="w-[32px] h-[32px]" />
+    <Typo variant="h3" color="primary" class="!mb-0"
+      ><a href="/">{SITE_TITLE}</a></Typo
+    >
+  </div>
   <ul
     id="menu"
     class="flex flex-col items-center justify-start gap-x-4 p-4 flex-1 list-none bg-light

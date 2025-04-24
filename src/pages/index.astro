@@ -6,6 +6,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import { buildPaginationParams } from "@/lib/utils/pagination";
 import Pagination from "@/components/Pagination.astro";
 import FortuneCookie from "@/components/FortuneCookie";
+import { PAGE_SIZE } from "@/consts";
 
 const allPosts = await getAllPosts({
   sort: {
@@ -13,8 +14,7 @@ const allPosts = await getAllPosts({
   },
 });
 
-const pageSize = 5;
-
+const pageSize = PAGE_SIZE;
 const pageParams = buildPaginationParams(allPosts, pageSize);
 const {
   props: { items, previousPage, nextPage },

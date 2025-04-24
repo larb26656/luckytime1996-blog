@@ -15,7 +15,7 @@ export default function FortuneCookie() {
       className="flex flex-col justify-center items-center p-4 gap-4 cursor-pointer"
       onClick={fortune}
     >
-      <img src="/images/misc/clover.svg" />
+      <img src="/images/misc/clover-full.png" className="w-[100px]" />
       {fortuneMessage && (
         <motion.p
           key={fortuneMessage}
