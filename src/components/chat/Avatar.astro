@@ -1,0 +1,32 @@
+---
+interface Props {
+  content: string;
+  isMe?: boolean;
+  class?: string;
+}
+
+const { content, isMe: isMe = false, class: className = "" } = Astro.props;
+
+const avatarClasses = `
+  flex-shrink-0 
+  w-[37px] h-[37px]
+  flex items-center justify-center 
+  overflow-hidden
+  ${isMe ? "" : "scale-x-[-1]"}
+  ${className}
+`;
+---
+
+<div class={avatarClasses}>
+  {
+    (
+      <img
+        src={content}
+        alt="Avatar"
+        class="w-full h-full object-cover"
+        width={37}
+        height={37}
+      />
+    )
+  }
+</div>

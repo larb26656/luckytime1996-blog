@@ -10,6 +10,7 @@ interface PostFilterOption {
 
 interface PostFilterCriteria {
   type?: string;
+  draft?: boolean;
 }
 
 interface PostFilterSort {
@@ -44,13 +45,20 @@ function filterPosts(
   blogs: PostEntry[],
   criteria: PostFilterCriteria
 ): PostEntry[] {
-  const { type } = criteria;
+  const { type, draft } = criteria;
+  const conditions: ((blog: PostEntry) => boolean)[] = [];
 
-  if (type) {
-    blogs = blogs.filter((blog) => blog.data.type === type);
+  if (type !== undefined) {
+    conditions.push((blog) => blog.data.type === type);
   }
 
-  return blogs;
+  if (draft !== undefined) {
+    conditions.push((blog) => blog.data.draft === draft);
+  }
+
+  return blogs.filter((blog) =>
+    conditions.every((condition) => condition(blog))
+  );
 }
 
 function sortPosts(blogs: PostEntry[], sort: PostFilterSort): PostEntry[] {

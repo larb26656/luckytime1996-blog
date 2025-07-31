@@ -1,0 +1,51 @@
+---
+import ChatBubble from "./ChatBubble.astro";
+import ChatInfo from "./ChatInfo.astro";
+import type { CharacterName, Message, UserData } from "./type";
+
+const character: Record<CharacterName, UserData> = {
+  me: {
+    name: "me",
+    avatarPath: "/images/avatars/me.png",
+  },
+  "black-cat": {
+    name: "Black cat",
+    avatarPath: "/images/avatars/black-cat.png",
+  },
+  "white-cat": {
+    name: "White cat",
+    avatarPath: "/images/avatars/white-cat.png",
+  },
+};
+
+interface Props {
+  messages: Message[];
+  class?: string;
+}
+
+const { messages = [], class: className = "" } = Astro.props;
+---
+
+<div
+  class={`flex flex-col flex-1 items-center overflow-y-auto p-2 space-y-2 gap-2 ${className || ""}`}
+>
+  {
+    messages.map((message) => {
+      if (message.type === "info") {
+        return <ChatInfo content={message.content} />;
+      }
+
+      const characterData = character[message.name];
+
+      return (
+        <ChatBubble
+          class="w-full"
+          message={message.content}
+          isMe={message.isMe}
+          avatar={characterData.avatarPath}
+          username={characterData.name}
+        />
+      );
+    })
+  }
+</div>

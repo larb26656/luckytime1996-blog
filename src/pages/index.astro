@@ -9,6 +9,9 @@ import FortuneCookie from "@/components/FortuneCookie";
 import { PAGE_SIZE } from "@/consts";
 
 const allPosts = await getAllPosts({
+  criteria: {
+    draft: false,
+  },
   sort: {
     date: "DESC",
   },

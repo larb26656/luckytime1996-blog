@@ -1,0 +1,38 @@
+---
+import Avatar from "./Avatar.astro";
+
+interface Props {
+  message: string;
+  isMe?: boolean;
+  avatar: string;
+  username: string;
+  class?: string;
+}
+
+const { message, isMe = false, avatar, username } = Astro.props;
+
+const bubbleClasses = `
+  max-w-[80%] p-3 rounded-2xl
+  ${
+    isMe
+      ? "bg-primary text-white ml-auto rounded-tr-none"
+      : "bg-gray-100 text-gray-800 mr-auto rounded-tl-none"
+  }
+`;
+---
+
+<div class={`flex items-start gap-2 mb-2 ${Astro.props.class || ""}`.trim()}>
+  <div
+    class={`flex ${isMe ? "flex-row-reverse" : "flex-row"} items-start gap-2 w-full`}
+  >
+    <Avatar content={avatar} isMe={isMe} />
+    <div class={bubbleClasses}>
+      {
+        !isMe && (
+          <div class="text-xs font-semibold font-primary mb-1">{username}</div>
+        )
+      }
+      <span class="break-words text-xs font-primary">{message}</span>
+    </div>
+  </div>
+</div>
