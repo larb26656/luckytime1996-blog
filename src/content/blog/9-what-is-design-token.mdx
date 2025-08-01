@@ -3,7 +3,7 @@ title: Design token คืออะไร?
 description: "Design token คืออะไร?"
 date: 2025-07-31T12:20:00Z
 type: "Bite"
-image: "/images/posts/07/thumbnail.jpg"
+image: "../../assets/blogs/09/thumbnail.jpg"
 tags: ["design-token", "design-system", "figma", "workflow"]
 draft: true
 ---
@@ -61,5 +61,51 @@ import ChatBox from "@/components/chat/ChatBox.astro";
       name: "me",
     },
   ]}
-  className="my-8 p-4 bg-gray-50 rounded-lg"
+/>
+
+<ChatBox
+  messages={[
+   {
+      type: "bubble",
+      content:
+        "แก้ไขไฟล์ token เรียบร้อยแล้วนะ ลองดึงไฟล์มาอัปเดตดู",
+      isMe: false,
+      name: "black-cat",
+    },
+    {
+      type: "bubble",
+      content: "โอเค เดี๋ยวเราลองดึง token เวอร์ชันใหม่มา build แล้ว deploy ให้ก่อนนะ",
+      isMe: true,
+      name: "me",
+    },
+     {
+      type: "info",
+      content: "1 นาทีต่อมา",
+    },
+    {
+      type: "bubble",
+      content: "Deploy เรียบร้อยแล้ว ลองตรวจดูสี heading ที่เว็บนะ",
+      isMe: true,
+      name: "me",
+    },
+    {
+      type: "bubble",
+      content: "ขอดูหน่อย... อืม สี heading เปลี่ยนตามที่ต้องการเลย ดีมาก!",
+      isMe: false,
+      name: "black-cat",
+    },
+    {
+      type: "bubble",
+      content:
+        "เยี่ยมเลยถ้าคราวหน้ามีแก้ไขอีก ก็บอกได้เลย เดี๋ยวผมจัดการ deploy ให้เหมือนเดิม",
+      isMe: true,
+      name: "me",
+    },
+    {
+      type: "bubble",
+      content: "แบบนี้ทำงานง่ายขึ้นเยอะเลย 😄",
+      isMe: false,
+      name: "black-cat",
+    },
+  ]}
 />

@@ -1,0 +1,11 @@
+{
+  "attachmentFolderPath": "./src/assets/attachments",
+  "alwaysUpdateLinks": false,
+  "showUnsupportedFiles": false,
+  "userIgnoreFilters": [
+    "node_modules/"
+  ],
+  "promptDelete": false,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
+}

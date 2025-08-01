@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "ceb8a78a84e27cef",
+    "type": "split",
+    "children": [
+      {
+        "id": "b5114969ef758088",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5ec00bbad942984b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/content/blog/8-first-hackathon-experience.mdx",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "8-first-hackathon-experience"
+            }
+          },
+          {
+            "id": "865f8b7871e4ce65",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "src/content/blog/src/assets/attachments/1-8-first-hackathon-experience.png"
+              },
+              "icon": "lucide-image",
+              "title": "1-8-first-hackathon-experience"
+            }
+          },
+          {
+            "id": "a6da52c864ee0cb5",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "src/assets/blogs/8-first-hackathon-experience/2520250801100821.jpeg"
+              },
+              "icon": "lucide-image",
+              "title": "2520250801100821"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c8e87a110d09f0ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a97eb78a5cc4f3a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1347ce1a880add5b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8910a2d01ec90e87",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "aa225fe53b175e4d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 448.5
+  },
+  "right": {
+    "id": "46d5ad96cee1fb2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f21f586e25e55c38",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4ad95023a246e0c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n"
+            }
+          },
+          {
+            "id": "3a2662769596e5d8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n"
+            }
+          },
+          {
+            "id": "bdfd213889c27f84",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3300051047d23979",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5ec00bbad942984b",
+  "lastOpenFiles": [
+    "src/content/blog/src/assets/attachments/8-8-first-hackathon-experience.png",
+    "src/content/blog/src/assets/attachments/7-8-first-hackathon-experience.png",
+    "src/content/blog/8-first-hackathon-experience.mdx",
+    "src/content/blog/src/assets/attachments/6-8-first-hackathon-experience.png",
+    "src/assets/blogs/8-first-hackathon-experience/2520250801100821.jpeg",
+    "src/content/blog/src/assets/attachments/1-8-first-hackathon-experience.png",
+    "src/content/blog/src/assets/attachments/2-8-first-hackathon-experience.png",
+    "src/content/blog/src/assets/attachments/5-8-first-hackathon-experience.png",
+    "src/content/blog/src/assets/attachments/8-first-hackathon-experience.png",
+    "src/content/blog/src/assets/attachments/4-8-first-hackathon-experience.png",
+    "src/content/blog/src/assets/attachments/3-8-first-hackathon-experience.png",
+    "src/content/blog/1-linux-cmd-user-group-management.md",
+    "src/content/blog/src/assets/attachments",
+    "src/content/blog/src/assets",
+    "src/content/blog/src",
+    "src/assets/blogs/8-first-hackathon-experience/2520250801100819.jpeg",
+    "src/content/blog/9-what-is-design-token.mdx",
+    "src/content/blog/4-backend-http-request-debugging.md",
+    "src/content/blog/5-generate-api-spec-in-spring-boot.md",
+    "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
+    "test",
+    "untitled folder",
+    "test.md",
+    "src/content/blog/6-setting-git-without-password.md",
+    "src/assets/blogs/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n",
+    "src/assets/blogs/8-first-hackathon-experience",
+    "README.md",
+    "Untitled.canvas",
+    "2025-07-31.md",
+    "images/posts/09",
+    "src/content/blog/2-linux-cmd-basic-file-management.md",
+    "src/content/blog/3-observability.md",
+    "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n 1.md"
+  ]
+}

@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../../components/FormattedDate.astro";
 import Typo from "../../components/Typo.astro";
 import MainLayout from "../MainLayout.astro";
+import { Image } from "astro:assets";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -26,7 +27,7 @@ const { title, description, date, image, type } = Astro.props;
     <div class="flex justify-center p-4">
       {
         image && (
-          <img class="rounded-md w-full lg:w-[500px]" src={image} alt="" />
+          <Image class="rounded-md w-full lg:w-[500px]" src={image} alt="" />
         )
       }
     </div>

@@ -3,7 +3,7 @@ title: แนวทางการทำ API Spec ใน Spring boot
 description: "เมื่อเราเริ่มพัฒนา API Server ไม่ว่าจะเพื่อให้ Frontend หรือ Third-party เข้ามาเชื่อมต่อกับระบบ สิ่งสำคัญที่ขาดไม่ได้คือ เอกสาร API Specification เพื่อระบุว่า API ของเรามี Endpoint อะไรบ้าง รับส่งข้อมูลอย่างไร และต้องใช้รูปแบบใดในการเรียกใช้งาน"
 date: 2025-04-07T00:06:00Z
 type: "Article"
-image: "/images/posts/05/thumbnail.jpg"
+image: "../../assets/blogs/05/thumbnail.jpg"
 tags:
   [
     "java",
@@ -21,9 +21,7 @@ draft: false
 
 เมื่อเราเริ่มพัฒนา API Server ไม่ว่าจะเพื่อให้ Frontend หรือ Third-party เข้ามาเชื่อมต่อกับระบบ สิ่งสำคัญที่ขาดไม่ได้คือ **เอกสาร API Specification** เพื่อระบุว่า API ของเรามี Endpoint อะไรบ้าง รับส่งข้อมูลอย่างไร และต้องใช้รูปแบบใดในการเรียกใช้งาน
 
-<p align="center">
-  <img src="/images/posts/05/image.png" />
-</p>
+![API Documentation with Swagger UI](../../assets/blogs/05/image.png)
 
 ในอดีต เราอาจต้องเขียนเอกสาร API ด้วยมือ ซึ่งใช้เวลานาน และเสี่ยงต่อการหลุดข้อมูลเมื่อโค้ดมีการเปลี่ยนแปลง แต่คงจะดีไม่น้อยถ้าเราสามารถ **Generate API Spec อัตโนมัติจากโค้ดจริงได้เลย**
 
@@ -33,9 +31,7 @@ draft: false
 
 1. สร้าง Project Spring boot โดยใช้ [https://start.spring.io](https://start.spring.io) จากนั้นทำการเลือก Dependencies Spring Web, Lombok
 
-<p align="center">
-  <img src="/images/posts/05/image 1.png" />
-</p>
+![Spring Initializr with Web and Lombok dependencies](../../assets/blogs/05/image%201.png)
 
 2. เพิ่ม Dependency สำหรับ OpenAPI + Swagger UI
 
@@ -106,9 +102,7 @@ public class TestController {
 
 หากทุกอย่างถูกต้อง คุณจะเห็นหน้า Swagger UI ดังภาพ
 
-<p align="center">
-  <img src="/images/posts/05/image 2.png" />
-</p>
+![Generated Swagger UI for the API](../../assets/blogs/05/image%202.png)
 
 5. เปลี่ยน Path ของ Swagger UI (Optional)
 
@@ -180,9 +174,7 @@ Swagger คือชุดเครื่องมือที่ช่วยใ
 
 หากทุกอย่างถูกต้อง คุณจะเห็นหน้า Redoc ดังภาพ
 
-<p align="center">
-  <img src="/images/posts/05/image 3.png" />
-</p>
+![API documentation with Redoc UI](../../assets/blogs/05/image%203.png)
 
 ### Scalar
 
@@ -209,9 +201,7 @@ Swagger คือชุดเครื่องมือที่ช่วยใ
 
 หากทุกอย่างถูกต้อง คุณจะเห็นหน้า Scalar ดังภาพ
 
-<p align="center">
-  <img src="/images/posts/05/image 4.png" />
-</p>
+![API documentation with Scalar UI](../../assets/blogs/05/image%204.png)
 
 ## ปิดการใช้งาน Swagger UI (Optional)
 

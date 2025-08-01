@@ -3,7 +3,7 @@ title: การใช้ Model AI บน DeepInfra กับ n8n
 description: "หากคุณใช้งาน n8n และต้องการเชื่อมต่อกับ Model AI ที่ Deploy บน DeepInfra แต่พบว่าไม่มีตัวเลือก DeepInfra โดยตรงใน AI Agent Node วันนี้ผมมีวิธีแก้ปัญหานี้มาฝากครับ"
 date: 2025-04-19T12:20:00Z
 type: "Bite"
-image: "/images/posts/07/thumbnail.jpg"
+image: "../../assets/blogs/07/thumbnail.jpg"
 tags: ["deepinfra", "openai", "n8n", "model", "ai", "agent"]
 draft: false
 ---
@@ -20,35 +20,25 @@ DeepInfra เป็นแพลตฟอร์มที่ให้บริก�
 
 - เพิ่ม Node "AI Agent" เข้าไปใน Workflow ของคุณ
 
-<p align="center">
-  <img src="/images/posts/07/image.png" />
-</p>
+![AI Agent node in n8n workflow](../../assets/blogs/07/image.png)
 
 2. เลือก Language Model เป็น "OpenAI Chat Model"
 
-<p align="center">
-  <img src="/images/posts/07/image 1.png" />
-</p>
+![Select OpenAI Chat Model](../../assets/blogs/07/image%201.png)
 
 3. เพิ่ม Credential ใหม่ด้วยการกดปุ่ม `+ Create new credential`
 
-<p align="center">
-  <img src="/images/posts/07/image 2.png" />
-</p>
+![Create new credential button](../../assets/blogs/07/image%202.png)
 
 4. ตั้งค่า Credential
 
 - นำ API Key จากบัญชี DeepInfra ของคุณมาใส่ในช่อง API Key
 - ในช่อง Base URL ให้เปลี่ยนจาก `https://api.openai.com/v1` (ค่าเริ่มต้น) เป็น `https://api.deepinfra.com/v1/openai`
 
-<p align="center">
-  <img src="/images/posts/07/image 3.png" />
-</p>
+![Configure DeepInfra API credentials](../../assets/blogs/07/image%203.png)
 
 5. เลือก Model ที่ต้องการใช้
 
-<p align="center">
-  <img src="/images/posts/07/image 4.png" />
-</p>
+![Select model in n8n](../../assets/blogs/07/image%204.png)
 
 เพียงเท่านี้เราก็สามารถใช้ Model AI ที่ Deploy บน DeepInfra ได้แล้ว แล้วพบกันใหม่ในบทความหน้า สวัสดีครับ! 🚀

@@ -2,7 +2,7 @@
 title: "รวมคำสั่งจัดการ User และ Group ใน Linux"
 description: "ในบทความนี้ เราจะแนะนำคำสั่งพื้นฐานที่ใช้จัดการ User และ Group"
 date: 2024-11-20T05:00:00Z
-image: "/images/posts/01/thumbnail.webp"
+image: "../../assets/blogs/01/thumbnail.webp"
 type: "Bite"
 tags: ["linux", "command", "OS"]
 draft: false

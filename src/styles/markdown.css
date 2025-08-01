@@ -23,6 +23,10 @@
     @apply mb-4;
   }
 
+  p > img {
+    @apply mx-auto;
+  }
+
   a {
     @apply text-primary underline hover:no-underline hover:text-secondary;
   }

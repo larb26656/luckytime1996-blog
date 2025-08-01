@@ -12,7 +12,7 @@ interface Props {
 const { message, isMe = false, avatar, username } = Astro.props;
 
 const bubbleClasses = `
-  max-w-[80%] p-3 rounded-2xl
+  max-w-[80%] px-4 py-2 rounded-2xl
   ${
     isMe
       ? "bg-primary text-white ml-auto rounded-tr-none"

@@ -2,7 +2,7 @@
 title: "รวมคำสั่งจัดการไฟล์พื้นฐาน Linux"
 description: "การจัดการไฟล์ใน Linux เป็นสิ่งสำคัญที่ช่วยให้เราสามารถจัดระเบียบไฟล์และโฟลเดอร์ได้อย่างมีประสิทธิภาพ"
 date: 2024-11-21T09:00:00Z
-image: "/images/posts/02/thumbnail.webp"
+image: "../../assets/blogs/02/thumbnail.webp"
 type: "Bite"
 tags: ["linux", "file", "command", "OS"]
 draft: false

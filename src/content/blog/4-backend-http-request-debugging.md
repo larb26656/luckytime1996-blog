@@ -3,7 +3,7 @@ title: มาลอง Debug HTTP request ในฝั่ง Backend กัน
 description: "เมื่อเราต้องเชื่อมต่อกับ API ภายนอกโดยใช้ HTTP request เราจะมั่นใจได้อย่างไรว่าข้อมูลที่เราส่งไปนั้นถูกต้อง? เช่น Payload, Header ที่ส่งไป"
 date: 2025-02-09T01:50:00Z
 type: "Article"
-image: "/images/posts/04/thumbnail.jpg"
+image: "../../assets/blogs/04/thumbnail.jpg"
 tags: ["java", "debug", "proxy", "http request", "mitmproxy"]
 draft: false
 ---
@@ -66,9 +66,7 @@ public class ApiService {
 
 ถ้าใครเคยทำงานฝั่ง Frontend คงจะคุ้นเคยกับ Dev tool ในส่วนของ Tab network ที่สามารถ Debug HTTP request ที่ส่งจาก Web browser ได้
 
-<p align="center">
-  <img src="/images/posts/04/image.png" />
-</p>
+![Network tab in browser](../../assets/blogs/04/image.png)
 
 ซึ่ง Tool ตัวนี้มีประโยชน์มากในการ Debug เพื่อหาข้อผิดพลาดที่เกิดจากการ Call HTTP request
 
@@ -114,9 +112,7 @@ mitmproxy
 
 จะปรากฏหน้า Console ของ Mitmproxy
 
-<p align="center">
-  <img src="/images/posts/04/image 1.png" />
-</p>
+![Mitmproxy installation](../../assets/blogs/04/image%201.png)
 
 ### ทดสอบการใช้งาน Proxy
 
@@ -128,23 +124,17 @@ http_proxy=http://127.0.0.1:8080/ curl http://example.com/
 
 หากทุกอย่างถูกต้อง คุณจะเห็นข้อมูล Request แสดงบน Console
 
-<p align="center">
-  <img src="/images/posts/04/image 2.png" />
-</p>
+![Mitmproxy running in terminal](../../assets/blogs/04/image%202.png)
 
 จากรูปจะสังเกตุว่า มี Log ในการ Call HTTP request ไปยัง [http://www.example.com](http://www.example.com)
 
 โดยเราสามารถดูรายละเอียดของ Request โดยการกดปุ่ม `Enter` จะปรากฎรายละเอียดของ Request ดังรูป
 
-<p align="center">
-  <img src="/images/posts/04/image 3.png" />
-</p>
+![Proxy settings in system preferences](../../assets/blogs/04/image%203.png)
 
 ซึ่งถ้าเราอยากดูข้อมูลใน Tab อื่นๆเช่น Response สามารถกดปุ่ม `→` , `←` เลื่อน Tab ได้
 
-<p align="center">
-  <img src="/images/posts/04/image 4.png" />
-</p>
+![Proxy authentication prompt](../../assets/blogs/04/image%204.png)
 
 จากตัวอย่างเราจะเห็นได้ว่าเราสามารถดักจัก Request จาก CURL ได้แล้ว 🎉
 
@@ -205,19 +195,13 @@ Mitmproxy
 
 ไปที่เมนู `RUN > Edit configurations` จะปรากฎเมนูการตั้งค่าการ Run ดังภาพ
 
-<p align="center">
-  <img src="/images/posts/04/image 5.png" />
-</p>
+![Mitmproxy web interface](../../assets/blogs/04/image%205.png)
 
 คลิกที่เมนู `Modify options > Add VM options` เพื่อทำการกำหนด VM options ในการ Run class
 
-<p align="center">
-  <img src="/images/posts/04/image 6.png" />
-</p>
+![Request details in mitmproxy](../../assets/blogs/04/image%206.png)
 
-<p align="center">
-  <img src="/images/posts/04/image 7.png" />
-</p>
+![Response details in mitmproxy](../../assets/blogs/04/image%207.png)
 
 จากรูปจะสังเกตุเห็น Input VM options ในส่วนของ Build and run ให้ใส่ VM option ดังนี้
 
@@ -229,9 +213,7 @@ Mitmproxy
 
 จะพบว่า Console mitmproxy จะ ปรากฎรายละเอียดการ Call request ไปยัง https://jsonplaceholder.typicode.com/posts
 
-<p align="center">
-  <img src="/images/posts/04/image 8.png" />
-</p>
+![Filtering requests in mitmproxy](../../assets/blogs/04/image%208.png)
 
 การ Debug HTTP request ฝั่ง Backend ไม่ยากอย่างที่คิดเลยใช่ไหมครับ? ลองเอาเทคนิคเหล่านี้ไปปรับใช้กันดูนะครับ แล้วพบกันใหม่โอกาสหน้า สวัสดีครับ! 🙌
 
