@@ -27,6 +27,11 @@
     @apply mx-auto;
   }
 
+  p > em {
+    display: block;
+    text-align: center;
+  }
+
   a {
     @apply text-primary underline hover:no-underline hover:text-secondary;
   }
