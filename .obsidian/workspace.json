@@ -11,14 +11,14 @@
             "id": "9aa98e651329302e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
+                "aFile": "src/styles/markdown.css",
+                "bFile": "src/styles/markdown.css",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "README"
+              "icon": "diff",
+              "title": "Diff: markdown.css"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:sht9",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,11 +74,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 442.5,
+    "collapsed": true
   },
   "right": {
     "id": "46d5ad96cee1fb2f",
@@ -179,11 +181,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1347ce1a880add5b",
+  "active": "9aa98e651329302e",
   "lastOpenFiles": [
+    "src/content/blog/8-first-hackathon-experience.mdx",
+    "src/content/blog/9-what-is-design-token.mdx",
+    "README.md",
     "Untitled.canvas",
     "2025-08-02.md",
-    "src/content/blog/8-first-hackathon-experience.mdx",
     "src/assets/attachments/8-first-hackathon-experience-5.jpeg",
     "src/assets/attachments/8-first-hackathon-experience-4.jpeg",
     "src/assets/attachments/8-first-hackathon-experience-14.png",
@@ -194,7 +198,6 @@
     "src/assets/attachments/8-first-hackathon-experience-9.png",
     "src/assets/attachments/8-first-hackathon-experience-8.png",
     "src/assets/attachments/8-first-hackathon-experience-7.png",
-    "src/content/blog/9-what-is-design-token.mdx",
     "src/assets/attachments",
     "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
     "src/content/blog/1-linux-cmd-user-group-management.md",
@@ -209,7 +212,6 @@
     "src/content/blog/6-setting-git-without-password.md",
     "src/assets/blogs/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n",
     "src/assets/blogs/8-first-hackathon-experience",
-    "README.md",
     "2025-07-31.md",
     "src/content/blog/2-linux-cmd-basic-file-management.md",
     "src/content/blog/3-observability.md",

@@ -1,6 +1,4 @@
 .markdown {
-  @apply text-dark font-content text-md/loose;
-
   h1,
   h2,
   h3 {
@@ -20,10 +18,14 @@
   }
 
   p {
-    @apply mb-4;
+    @apply text-dark font-content text-md/loose mb-4;
   }
 
   p > img {
+    @apply mx-auto;
+  }
+
+  p > svg[id^="mermaid-"] {
     @apply mx-auto;
   }
 
