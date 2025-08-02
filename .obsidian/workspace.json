@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "caf5856eb38b8910",
+        "id": "d0a089743d3a691f",
         "type": "tabs",
         "children": [
           {
-            "id": "9aa98e651329302e",
+            "id": "d085aea7aff62c52",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "src/styles/markdown.css",
-                "bFile": "src/styles/markdown.css",
-                "aRef": ""
+                "file": "src/content/blog/8-first-hackathon-experience.mdx",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: markdown.css"
+              "icon": "lucide-file",
+              "title": "8-first-hackathon-experience"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:sht9",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,13 +74,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 442.5,
-    "collapsed": true
+    "width": 442.5
   },
   "right": {
     "id": "46d5ad96cee1fb2f",
@@ -181,13 +179,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9aa98e651329302e",
+  "active": "d085aea7aff62c52",
   "lastOpenFiles": [
-    "src/content/blog/8-first-hackathon-experience.mdx",
+    "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
     "src/content/blog/9-what-is-design-token.mdx",
+    "2025-08-02.md",
+    "src/content/blog/8-first-hackathon-experience.mdx",
     "README.md",
     "Untitled.canvas",
-    "2025-08-02.md",
     "src/assets/attachments/8-first-hackathon-experience-5.jpeg",
     "src/assets/attachments/8-first-hackathon-experience-4.jpeg",
     "src/assets/attachments/8-first-hackathon-experience-14.png",
@@ -199,7 +198,6 @@
     "src/assets/attachments/8-first-hackathon-experience-8.png",
     "src/assets/attachments/8-first-hackathon-experience-7.png",
     "src/assets/attachments",
-    "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
     "src/content/blog/1-linux-cmd-user-group-management.md",
     "src/content/blog/src/assets/attachments",
     "src/content/blog/src/assets",
