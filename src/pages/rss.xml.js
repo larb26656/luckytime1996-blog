@@ -3,14 +3,7 @@ import { getAllPosts } from '@/lib/repo/post.repo';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 export async function GET(context) {
-	const allPosts = await getAllPosts({
-		criteria: {
-			draft: false,
-		},
-		sort: {
-			date: "DESC",
-		},
-	});
+	const allPosts = (await getAllPosts()).slice(0, 10);
 
 	return rss({
 		title: SITE_TITLE,
