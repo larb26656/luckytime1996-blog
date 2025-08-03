@@ -8,14 +8,7 @@ import { buildPaginationParams } from "@/lib/utils/pagination";
 import Typo from "@/components/Typo.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await getAllPosts({
-    criteria: {
-      draft: false,
-    },
-    sort: {
-      date: "DESC",
-    },
-  });
+  const allPosts = await getAllPosts({});
 
   const pageSize = PAGE_SIZE;
   return buildPaginationParams(allPosts, pageSize);
