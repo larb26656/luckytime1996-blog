@@ -165,6 +165,7 @@
   "active": "93af72cf7096bace",
   "lastOpenFiles": [
     "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
+    "src/content/blog/8-first-hackathon-experience.mdx",
     "src/pages/article/page/[page].astro",
     "src/pages/blog/page/[page].astro",
     "src/pages/bite/page/[page].astro",
@@ -184,7 +185,6 @@
     "src/pages/blog/index.astro",
     "src/pages/blog/page",
     "src/pages/bite/index.astro",
-    "src/pages/bite/page",
     "src/content/blog/6-setting-git-without-password.md",
     "src/content/blog/1-linux-cmd-user-group-management.md",
     "src/content/blog/3-observability.md",
