@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "tsx:ci": "tsx --tsconfig tsconfig.ci.json",
-    "lint:assets": "npm run tsx:ci ./ci/lint-assets.ts"
+    "lint:assets": "npm run tsx:ci ./ci/lint-assets.ts",
+    "optimize:image": "npm run tsx:ci ./ci/optimize-image.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.4",
@@ -30,6 +31,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
+    "commander": "^14.0.0",
+    "sharp": "^0.34.3",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2"
   }

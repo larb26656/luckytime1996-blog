@@ -27,11 +27,24 @@
 
   p > svg[id^="mermaid-"] {
     @apply mx-auto;
+    line-height: 1 !important;
+    font-size: 1em !important;
+    font-family: inherit !important;
+  }
+
+  p > svg[id^="mermaid-"] {
+    p {
+      all: unset;
+      line-height: normal;
+      font-size: 1em;
+      font-family: inherit;
+    }
   }
 
   p > em {
     display: block;
     text-align: center;
+    @apply p-4 text-sm text-gray-500;
   }
 
   a {
@@ -57,19 +70,9 @@
   }
 
   ul {
-    list-style-type: none;
+    list-style-type: circle;
     padding-left: 1em;
     @apply mb-4;
-
-    li::before {
-      content: "- ";
-      position: absolute;
-      margin-left: -1em;
-    }
-
-    li {
-      position: relative;
-    }
   }
 
   blockquote {
