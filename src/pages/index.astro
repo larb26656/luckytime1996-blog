@@ -8,14 +8,7 @@ import Pagination from "@/components/Pagination.astro";
 import FortuneCookie from "@/components/FortuneCookie";
 import { PAGE_SIZE } from "@/consts";
 
-const allPosts = await getAllPosts({
-  criteria: {
-    draft: false,
-  },
-  sort: {
-    date: "DESC",
-  },
-});
+const allPosts = await getAllPosts({});
 
 const pageSize = PAGE_SIZE;
 const pageParams = buildPaginationParams(allPosts, pageSize);

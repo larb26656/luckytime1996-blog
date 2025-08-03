@@ -10,11 +10,7 @@ import { buildPaginationParams } from "@/lib/utils/pagination";
 export async function getStaticPaths() {
   const allPosts = await getAllPosts({
     criteria: {
-      // TODO make this type safe?
       type: "Article",
-    },
-    sort: {
-      date: "DESC",
     },
   });
 

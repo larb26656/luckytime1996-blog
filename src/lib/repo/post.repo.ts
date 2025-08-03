@@ -16,15 +16,21 @@ interface PostFilterCriteria {
 interface PostFilterSort {
   date?: OrderDirection;
 }
+const defaultCriteria: PostFilterCriteria = { draft: false };
+
+const defaultSort: PostFilterSort = { date: "DESC" };
 
 export async function getAllPosts({
   criteria = {},
   sort = {},
-}: PostFilterOption): Promise<PostEntry[]> {
+}: PostFilterOption = {}): Promise<PostEntry[]> {
   let blogs = await getCollection("blog");
 
-  blogs = filterPosts(blogs, criteria);
-  blogs = sortPosts(blogs, sort);
+  const mergedCriteria = { ...defaultCriteria, ...criteria };
+  const mergedSort = { ...defaultSort, ...sort };
+
+  blogs = filterPosts(blogs, mergedCriteria);
+  blogs = sortPosts(blogs, mergedSort);
 
   return blogs;
 }
@@ -32,11 +38,14 @@ export async function getAllPosts({
 export async function countAllPosts({
   criteria = {},
   sort = {},
-}: PostFilterOption): Promise<PostEntry[]> {
+}: PostFilterOption = {}): Promise<PostEntry[]> {
   let blogs = await getCollection("blog");
 
-  blogs = filterPosts(blogs, criteria);
-  blogs = sortPosts(blogs, sort);
+  const mergedCriteria = { ...defaultCriteria, ...criteria };
+  const mergedSort = { ...defaultSort, ...sort };
+
+  blogs = filterPosts(blogs, mergedCriteria);
+  blogs = sortPosts(blogs, mergedSort);
 
   return blogs;
 }
