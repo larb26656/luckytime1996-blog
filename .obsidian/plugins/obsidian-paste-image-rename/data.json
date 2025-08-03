@@ -1,8 +1,8 @@
 {
-  "imageNamePattern": "{{fileName}}",
+  "imageNamePattern": "src/assets/blogs/{{fileName}}/{{DATE:YYYYMMDDHHmmssSSS}}",
   "dupNumberAtStart": false,
   "dupNumberDelimiter": "-",
-  "dupNumberAlways": true,
+  "dupNumberAlways": false,
   "autoRename": true,
   "handleAllAttachments": true,
   "excludeExtensionPattern": "",

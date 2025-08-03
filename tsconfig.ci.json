@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".", 
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "target": "ES2020",
+      "esModuleInterop": true,
+      "allowImportingTsExtensions": true
+    }
+  }

@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "tsx:ci": "tsx --tsconfig tsconfig.ci.json",
+    "lint:assets": "npm run tsx:ci ./ci/lint-assets.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.4",
@@ -27,6 +29,8 @@
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.54.1"
+    "@playwright/test": "^1.54.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
   }
 }

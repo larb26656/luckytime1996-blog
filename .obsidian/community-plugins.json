@@ -1,5 +1,6 @@
 [
   "mdx-as-md-obsidian",
   "obsidian-paste-image-rename",
-  "obsidian-git"
+  "obsidian-git",
+  "templater-obsidian"
 ]

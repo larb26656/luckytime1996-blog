@@ -1,5 +1,5 @@
 {
-  "attachmentFolderPath": "src/assets/attachments",
+  "attachmentFolderPath": "/",
   "alwaysUpdateLinks": false,
   "showUnsupportedFiles": false,
   "userIgnoreFilters": [
