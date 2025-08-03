@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
+                "file": "src/content/blog/8-first-hackathon-experience.mdx",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n"
+              "title": "Outline of 8-first-hackathon-experience"
             }
           },
           {
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 513.5
   },
   "left-ribbon": {
     "hiddenItems": {
