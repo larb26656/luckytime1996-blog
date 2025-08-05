@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "371ee04b3113a644",
+        "id": "d2e14a3c4227e6b2",
         "type": "tabs",
         "children": [
           {
-            "id": "8c10dff19a2f4146",
+            "id": "8b535c455666dfeb",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "src/pages/blog/page/[page].astro",
-                "bFile": "src/pages/blog/page/[page].astro",
-                "aRef": ""
+                "file": "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: [page].astro"
+              "icon": "lucide-file",
+              "title": "9-how-to-use-obsidian-with-astro"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 424.5
   },
   "right": {
     "id": "46d5ad96cee1fb2f",
@@ -179,23 +179,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8c10dff19a2f4146",
+  "active": "8b535c455666dfeb",
   "lastOpenFiles": [
-    "public/images/default-placeholder.jpg",
-    "public/images/1.jpg",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805213452532.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805213220213.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/thumbnail.jpeg",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/thumbnail.jpg",
+    "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/Blog thumbnail(3).jpg",
     "src/content/blog/8-first-hackathon-experience.mdx",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805202400034.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805202115715.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191653926.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191538226 Medium Small.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191538226 Medium.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191538226.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro",
     "src/content/blog/6-setting-git-without-password.md",
     "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
     "src/content/blog/9-what-is-design-token.mdx",
-    "20250803123143682.png",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123228766.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123228766 Medium.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123221689.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123221689 Medium.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123205565.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123143682.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123205565 Medium.jpeg",
-    "src/assets/blogs/8-first-hackathon-experience/20250803123143682 Medium.jpeg",
     "backup",
     "ci/optimize-image.ts",
     "ci/resize-image.ts",
@@ -203,7 +205,6 @@
     "node_modules/commander/lib/suggestSimilar.js",
     "node_modules/commander/lib/argument.js",
     "node_modules/commander/lib/option.js",
-    "node_modules/commander/lib/help.js",
     "node_modules/d3-dsv/node_modules/commander/Readme.md",
     "node_modules/d3-dsv/node_modules/commander/CHANGELOG.md",
     "node_modules/svgo/node_modules/commander/Readme.md",
@@ -226,7 +227,6 @@
     "src/content/blog/9-test-eieie.md",
     "README.md",
     "Untitled.md",
-    "src/content/blog/5-generate-api-spec-in-spring-boot.md",
     "Untitled.canvas"
   ]
 }
