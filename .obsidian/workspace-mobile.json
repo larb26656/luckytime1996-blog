@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dd6f82a2aa8211f4",
+        "id": "ee4a28e45b59fcb6",
         "type": "tabs",
         "children": [
           {
-            "id": "93af72cf7096bace",
+            "id": "a3136a6c2aab6545",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,22 +162,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "93af72cf7096bace",
+  "active": "a3136a6c2aab6545",
   "lastOpenFiles": [
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224615164.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805230305880.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231237651.jpeg",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231311800.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231601205.png",
+    "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805230954987.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805225234483.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224030239.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805223952742.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805223811434.png",
     "src/content/blog/8-first-hackathon-experience.mdx",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222154273.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222337817.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222245069.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222113529.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222214934.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222228788.png",
     "/src/content/blog/9-how-to-use-obsidian-with-astro.md",
     "/src/content/blog",
     "/src/content",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222337817.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222245069.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222228788.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222214934.png",
     "/src/assets/blogs/9-how-to-use-obsidian-with-astro",
     "/src/assets/blogs",
     "/src/assets",
