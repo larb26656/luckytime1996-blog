@@ -128,4 +128,15 @@ src/assets/blogs/how-to-test/20250805191653926.png
 เป็น plugin ที่ช่วยให้เราสามารถกำหนด template สำหรับไฟล์ใหม่ได้อย่างยืดหยุ่นและทรงพลังมากกว่าการใช้ template ปกติที่มากับ Obsidian
 
 ถ้าใครเคยรู้สึกว่าเวลาเริ่มเขียนบทความใหม่แล้วต้องมานั่งพิมพ์ frontmatter เดิมๆ ทุกครั้ง เช่น title, date, tags, draft ฯลฯ plugin ตัวนี้จะช่วยให้ชีวิตง่ายขึ้นมาก
+## ใช้ Obisidain บน IOS
+![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805221940072.png)
 
+![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805222113529.png)
+
+![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805222154273.png)
+
+![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805222214934.png)
+
+![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805222228788.png)
+
+![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805222245069.png)![](../../assets/blogs/9-how-to-use-obsidian-with-astro/20250805222337817.png)

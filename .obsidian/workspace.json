@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d2e14a3c4227e6b2",
+        "id": "27e9d5e67fd513df",
         "type": "tabs",
         "children": [
           {
-            "id": "8b535c455666dfeb",
+            "id": "7d726e7aa054061a",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "src/content/blog/9-how-to-use-obsidian-with-astro.md",
-                "bFile": "src/content/blog/9-how-to-use-obsidian-with-astro.md",
-                "aRef": ""
+                "file": "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 9-how-to-use-obsidian-with-astro"
+              "icon": "lucide-file",
+              "title": "9-how-to-use-obsidian-with-astro"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 424.5
+    "width": 334.5
   },
   "right": {
     "id": "46d5ad96cee1fb2f",
@@ -179,20 +179,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8b535c455666dfeb",
+  "active": "7d726e7aa054061a",
   "lastOpenFiles": [
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222337817.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222245069.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222228788.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222214934.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222154273.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222113529.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805221940072.png",
     "src/content/blog/9-how-to-use-obsidian-with-astro.md",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805213452532.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805213220213.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/thumbnail.jpeg",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/thumbnail.jpg",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/Blog thumbnail(3).jpg",
     "src/content/blog/8-first-hackathon-experience.mdx",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805202400034.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805202115715.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191653926.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191538226 Medium Small.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805191538226 Medium.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro",
     "src/content/blog/6-setting-git-without-password.md",
     "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
