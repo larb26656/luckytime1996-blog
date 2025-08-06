@@ -1,7 +1,7 @@
 ---
 title: มาลองใช้ Obsidian คู่กับ Astro กันเถอะ!
 description: หลายคนที่เริ่มเขียนบล็อกด้วย framework อย่าง Astro น่าจะเคยเจอปัญหาเวลาเขียน Markdown อยู่บ้าง โดยเฉพาะตอนที่ต้องแทรกรูปภาพหรือจัดเนื้อหาให้ดูดี
-date: 2025-08-05 18:58
+date: 2025-08-07 5:39
 type: Article
 image: ../../assets/blogs/9-how-to-use-obsidian-with-astro/thumbnail.jpeg
 tags:
@@ -9,7 +9,7 @@ tags:
   - Astro
   - Markdown
   - Blog
-draft: true
+draft: false
 ---
 
 หลายคนที่เริ่มเขียนบล็อกด้วย framework อย่าง Astro คงจะเคยเจอปัญหาเวลาเขียน Markdown อยู่บ้าง โดยเฉพาะตอนที่ต้องการแทรกรูปภาพหรือจัดเนื้อหาให้ดูดี
@@ -312,6 +312,6 @@ git clone https://github.com/{your-username}/{your-repo}.git ./
 
 ไว้เจอกันใหม่ในบทความหน้า สวัสดีครับ
 
-**Ref:
+**Ref:**
 
 - https://www.youtube.com/watch?v=PScdHzUiBLA&t=787s
