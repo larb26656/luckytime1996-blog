@@ -181,8 +181,12 @@
   },
   "active": "7d726e7aa054061a",
   "lastOpenFiles": [
-    "Templates/blog-template.md",
+    "src/content/blog/8-first-hackathon-experience.mdx",
     "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805202400034.png",
+    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250806232346423.png",
+    "แต่.md",
+    "Templates/blog-template.md",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231601205.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231311800.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231237651.jpeg",
@@ -191,9 +195,6 @@
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224615164.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224030239.png",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805223952742.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805223811434.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222337817.png",
-    "src/content/blog/8-first-hackathon-experience.mdx",
     "src/assets/blogs/9-how-to-use-obsidian-with-astro",
     "src/content/blog/6-setting-git-without-password.md",
     "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
@@ -225,7 +226,6 @@
     "src/content/blog/asda.md",
     "src/content/blog/9-test-eieie.md",
     "README.md",
-    "Untitled.md",
     "Untitled.canvas"
   ]
 }

@@ -1,20 +1,14 @@
 .markdown {
-  h1,
-  h2,
-  h3 {
-    @apply font-primary font-semibold mb-4 mt-16;
-  }
-
   h1 {
-    @apply text-primary text-2xl;
+    @apply font-primary font-semibold text-primary text-2xl mb-4 mt-16;
   }
 
   h2 {
-    @apply text-primary text-xl;
+    @apply font-primary font-semibold text-primary text-xl mb-4 mt-16;
   }
 
   h3 {
-    @apply text-secondary text-lg;
+    @apply font-primary font-semibold text-secondary text-lg mb-4 mt-10;
   }
 
   p {
