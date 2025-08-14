@@ -114,7 +114,7 @@ src/assets/blogs/{{fileName}}/{{DATE:YYYYMMDDHHmmssSSS}}
 ซี่ง plugin นี้รองรับการใช้ **ตัวแปร** เพื่อช่วยกำหนด path ได้อย่างยืดหยุ่น เช่น:
 
 - `{{fileName}}` → แทนชื่อไฟล์ Markdown ที่กำลังเขียนอยู่
-- `{{DATE}}` → แสดงวันที่และเวลาปัจจุบัน (สามารถกำหนด format ได้ เช่น `{{DATE:YYYYMMDDHHmmssSSS}})`
+- `{{DATE}}` → แสดงวันที่และเวลาปัจจุบัน (สามารถกำหนด format ได้ เช่น `{{DATE:YYYYMMDDHHmmssSSS}}` )
 
 > นอกจากตัวแปรที่ผมยกตัวอย่างมา ยังมีตัวแปรอื่นให้ใช้อีก สามารถดูรายละเอียดเพิ่มเติมได้ที่ https://github.com/reorx/obsidian-paste-image-rename
 
