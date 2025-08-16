@@ -11,6 +11,7 @@ export async function GET(context) {
 		site: context.site,
 		items: allPosts.map((post) => ({
 			...post.data,
+			link: `/blog/${post.id}/`,
 			image: post.data.image?.src,
 			enclosure: {
 				url: post.data.image?.src,
