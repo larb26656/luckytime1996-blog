@@ -1,0 +1,39 @@
+---
+import { PAGE_SIZE } from "@/consts";
+import Pagination from "@/components/Pagination.astro";
+import PostList from "@/components/post/PostList.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import { getAllPosts, getAllTags } from "@/lib/repo/post.repo";
+import { buildPaginationParams } from "@/lib/utils/pagination";
+import Typo from "@/components/Typo.astro";
+
+export async function getStaticPaths() {
+  const allTags = await getAllTags();
+
+  const allPagesByTag = await Promise.all(
+    allTags.map(async (tag) => {
+      const allPosts = await getAllPosts({ criteria: { tag } });
+      return buildPaginationParams(allPosts, PAGE_SIZE, { tag });
+    })
+  );
+
+  const allPages = allPagesByTag.flat();
+
+  return allPages;
+}
+
+const { tag, page } = Astro.params;
+const { items, previousPage, nextPage } = Astro.props;
+---
+
+<MainLayout title={`Tag ${tag} page ${page}`}>
+  <Typo variant="h2" color="primary">> {tag}</Typo>
+  <PostList posts={items} />
+  <Pagination
+    previousPage={previousPage}
+    nextPage={nextPage}
+    option={{
+      basePath: `tag/${tag}/page`,
+    }}
+  />
+</MainLayout>

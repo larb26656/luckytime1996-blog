@@ -3,6 +3,7 @@ import { type CollectionEntry } from "astro:content";
 import FormattedDate from "@/components/FormattedDate.astro";
 import Typo from "@/components/Typo.astro";
 import { Image } from "astro:assets";
+import Badge from "@/components/badge/Badge.astro";
 type PostEntry = CollectionEntry<"blog">;
 
 interface Props {
@@ -11,15 +12,19 @@ interface Props {
 
 const {
   id,
-  data: { title, image, date, type, description },
+  data: { title, image, date, type, description, tags },
 } = Astro.props.post;
 ---
 
-<div class="flex flex-col items-start p-4 gap-4 lg:flex-row">
+<div class="flex flex-col items-start p-4 gap-4 lg:gap-8 md:flex-row">
   {
     image && (
       <a href={`/blog/${id}/`}>
-        <Image src={image} alt="" class="rounded-md w-full lg:w-[200px]" />
+        <Image
+          src={image}
+          alt=""
+          class="rounded-md w-full md:w-[200px] lg:w-[250px]"
+        />
       </a>
     )
   }
@@ -39,6 +44,17 @@ const {
         )
       }
     </div>
+    {
+      tags && (
+        <div class="flex flex-wrap gap-2 mb-2">
+          {tags.splice(0, 5).map((tag) => (
+            <a href={`/tag/${tag}`}>
+              <Badge variant="primary">{tag}</Badge>
+            </a>
+          ))}
+        </div>
+      )
+    }
     <Typo variant="normal">
       {description}
     </Typo>

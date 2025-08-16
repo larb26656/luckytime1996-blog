@@ -11,6 +11,7 @@ interface PostFilterOption {
 interface PostFilterCriteria {
   type?: string;
   draft?: boolean;
+  tag?: string;
 }
 
 interface PostFilterSort {
@@ -54,7 +55,7 @@ function filterPosts(
   blogs: PostEntry[],
   criteria: PostFilterCriteria
 ): PostEntry[] {
-  const { type, draft } = criteria;
+  const { type, draft, tag } = criteria;
   const conditions: ((blog: PostEntry) => boolean)[] = [];
 
   if (type !== undefined) {
@@ -63,6 +64,10 @@ function filterPosts(
 
   if (draft !== undefined) {
     conditions.push((blog) => blog.data.draft === draft);
+  }
+
+  if (tag !== undefined) {
+    conditions.push((blog) => blog.data.tags?.includes(tag) ?? false);
   }
 
   return blogs.filter((blog) =>
@@ -78,4 +83,10 @@ function sortPosts(blogs: PostEntry[], sort: PostFilterSort): PostEntry[] {
   }
 
   return blogs;
+}
+
+export async function getAllTags(): Promise<string[]> {
+  const allPosts = await getAllPosts();
+  const tags = allPosts.flatMap((post) => post.data.tags ?? []);
+  return [...new Set(tags)];
 }

@@ -10,11 +10,12 @@ export function getByPage<T>(items: T[], page: number, pageSize: number): T[] {
   return items.slice(startIndex, endIndex);
 }
 
-export function buildPaginationParams<T>(
+export function buildPaginationParams<T, P extends Record<string, any> = {}>(
   items: T[],
-  pageSize: number
+  pageSize: number,
+  extraParams?: P
 ): {
-  params: { page: number };
+  params: { page: number } & P;
   props: { items: T[]; previousPage?: number; nextPage?: number };
 }[] {
   const totalPage = getTotalPages(items, pageSize);
@@ -25,7 +26,7 @@ export function buildPaginationParams<T>(
     const nextPage = page < totalPage ? page + 1 : undefined;
 
     return {
-      params: { page: page },
+      params: { page, ...extraParams } as { page: number } & P,
       props: {
         items: getByPage(items, page, pageSize),
         previousPage: previousPage,

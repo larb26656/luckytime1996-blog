@@ -4,16 +4,17 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import Typo from "../../components/Typo.astro";
 import MainLayout from "../MainLayout.astro";
 import { Image } from "astro:assets";
+import Badge from "@/components/badge/Badge.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, date, image, type } = Astro.props;
+const { title, description, date, image, type, tags } = Astro.props;
 ---
 
 <MainLayout title={title} description={description} image={image?.src}>
   <article>
     <Typo variant="h2" color="primary">{title}</Typo>
-    <div class="flex gap-2">
+    <div class="flex gap-2 mb-2">
       <Typo variant="small" color="tertiary"><FormattedDate date={date} /></Typo
       >
       {
@@ -24,6 +25,17 @@ const { title, description, date, image, type } = Astro.props;
         )
       }
     </div>
+    {
+      tags && (
+        <div class="flex flex-wrap gap-2 mb-2">
+          {tags.map((tag) => (
+            <a href={`/tag/${tag}`}>
+              <Badge variant="primary">{tag}</Badge>
+            </a>
+          ))}
+        </div>
+      )
+    }
     <div class="flex justify-center p-4">
       {
         image && (

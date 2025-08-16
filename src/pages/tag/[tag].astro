@@ -1,0 +1,18 @@
+---
+import { getAllTags } from "@/lib/repo/post.repo";
+
+export async function getStaticPaths() {
+  const allTags = await getAllTags();
+
+  return allTags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag: tag,
+    },
+  }));
+}
+
+const { tag } = Astro.props;
+
+return Astro.rewrite(`/tag/${tag}/page/1`);
+---
