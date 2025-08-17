@@ -47,7 +47,7 @@ const {
     {
       tags && (
         <div class="flex flex-wrap gap-2 mb-2">
-          {tags.splice(0, 5).map((tag) => (
+          {tags.slice(0, 5).map((tag) => (
             <a href={`/tag/${tag}`}>
               <Badge variant="primary">{tag}</Badge>
             </a>
