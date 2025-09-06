@@ -1,35 +1,13 @@
 ---
-type Color = "primary" | "secondary" | "tertiary" | "dark" | "light";
-type Variant = "h1" | "h2" | "h3" | "normal" | "small" | "tertiary";
-type Font = "font-primary" | "font-serif";
+import type { Variant } from "./types";
+import { variantMap, colorToClass } from "./types";
 
 interface Props {
-  color?: Color;
+  color?: "primary" | "secondary" | "tertiary" | "dark" | "light";
   variant?: Variant;
-  font?: Font;
+  font?: "font-primary" | "font-serif";
   class?: string;
 }
-
-const colorToClass = {
-  primary: "text-primary",
-  secondary: "text-secondary",
-  tertiary: "text-tertiary",
-  dark: "text-dark",
-  light: "text-light",
-};
-
-const variantMap = {
-  h1: { size: "text-2xl", weight: "font-semibold", font: "font-primary" },
-  h2: { size: "text-xl", weight: "font-semibold", font: "font-primary" },
-  h3: { size: "text-lg", weight: "font-semibold", font: "font-primary" },
-  normal: {
-    size: "text-md/loose",
-    weight: "font-normal",
-    font: "font-content",
-  },
-  small: { size: "text-sm", weight: "font-light", font: "font-primary" },
-  tertiary: { size: "text-sm", weight: "font-normal", font: "font-primary" },
-};
 
 const {
   color = "dark",
@@ -38,7 +16,7 @@ const {
   class: propClassName,
 } = Astro.props;
 
-const { size, weight, font } = variantMap[variant] ?? variantMap["normal"];
+const { size, weight, font } = variantMap[variant] ?? variantMap.normal;
 const colorClass = colorToClass[color] ?? "text-dark";
 
 const classes = [overideFont || font, colorClass, size, weight, "mb-2"];
@@ -61,7 +39,7 @@ const className = classes.join(" ");
         );
       case "h2":
         return (
-          <h2 class:list={className}>
+          <h2 class={className}>
             <slot />
           </h2>
         );

@@ -5,7 +5,7 @@ import PostList from "@/components/post/PostList.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { getAllPosts } from "@/lib/repo/post.repo";
 import { buildPaginationParams } from "@/lib/utils/pagination";
-import Typo from "@/components/Typo.astro";
+import Typo from "@/components/typo/Typo.astro";
 
 export async function getStaticPaths() {
   const allPosts = await getAllPosts({});
