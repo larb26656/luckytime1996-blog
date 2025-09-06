@@ -82,7 +82,7 @@ export default function SearchBtn() {
       </button>
       <div
         className={cn(
-          "h-screen gap-x-4 p-4 bg-black/50 backdrop-blur-sm fixed inset-0 z-[1001] ease-in-out transition-opacity duration-300",
+          "h-dvh gap-x-4 p-4 bg-black/50 backdrop-blur-sm fixed inset-0 z-[1001] ease-in-out transition-opacity duration-300",
           showSearch ? "opacity-100 visible" : "opacity-0 invisible"
         )}
       >
