@@ -41,7 +41,7 @@ export default function SearchBar() {
   }, [keyword, fuse]);
 
   useEffect(() => {
-    if (showSearch) {
+    if ($showSearch) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -50,13 +50,13 @@ export default function SearchBar() {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [showSearch]);
+  }, [$showSearch]);
 
   useEffect(() => {
-    if (showSearch && inputRef.current) {
+    if ($showSearch && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [showSearch, inputRef]);
+  }, [$showSearch, inputRef]);
 
   useEffect(() => {
     if (!showSearch) {
