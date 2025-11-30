@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "27e9d5e67fd513df",
+        "id": "a0f8d88dbadc7002",
         "type": "tabs",
         "children": [
           {
-            "id": "7d726e7aa054061a",
+            "id": "635a6598c498d324",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+                "file": "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9-how-to-use-obsidian-with-astro"
+              "title": "10-how-to-use-figma-mcp-with-codex"
             }
           }
         ]
@@ -169,6 +169,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -179,20 +180,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7d726e7aa054061a",
+  "active": "635a6598c498d324",
   "lastOpenFiles": [
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805223811434.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224615164.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224030239.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805223952742.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222214934.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805213452532.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222337817.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222245069.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222228788.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805221940072.png",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805222154273.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130130329873.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130123702885.png",
+    "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130130247827.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130122906997.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130122618761.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130122442980.png",
+    "().md",
+    "src/assets/blogs/07/image 4.png",
+    "src/assets/blogs/07/image 3.png",
+    "src/assets/blogs/07/image 1.png",
+    "src/assets/blogs/07/image.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130121821187.png",
     "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex",
+    "src/content/blog/how-to-connect-figma-mcp-with-codex.md",
+    "src/assets/blogs/how-to-connect-figma-mcp-with-codex",
     "src/content/blog/8-first-hackathon-experience.mdx",
     "แต่.md",
     "Templates/blog-template.md",
@@ -205,8 +211,6 @@
     "ci/resize-image.ts",
     "node_modules/commander/typings/esm.d.mts",
     "node_modules/commander/lib/suggestSimilar.js",
-    "node_modules/commander/lib/argument.js",
-    "node_modules/commander/lib/option.js",
     "node_modules/d3-dsv/node_modules/commander/Readme.md",
     "node_modules/d3-dsv/node_modules/commander/CHANGELOG.md",
     "node_modules/svgo/node_modules/commander/Readme.md",
@@ -224,9 +228,6 @@
     "src/content/blog/asdasd.md",
     "src/content/blog/test.md",
     "src/content/blog/asdads.md",
-    "src/content/blog/asda.md",
-    "src/content/blog/9-test-eieie.md",
-    "README.md",
     "Untitled.canvas"
   ]
 }
