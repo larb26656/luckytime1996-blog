@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/blog/9-how-to-use-obsidian-with-astro.md",
+                "file": "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9-how-to-use-obsidian-with-astro"
+              "title": "10-how-to-use-figma-mcp-with-codex"
             }
           }
         ]
@@ -116,6 +116,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -129,6 +130,7 @@
         "state": {
           "type": "outline",
           "state": {
+            "file": "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -152,6 +154,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": false,
@@ -164,30 +167,35 @@
   },
   "active": "3ce790d76c29ef25",
   "lastOpenFiles": [
-    "src/content/blog/8-first-hackathon-experience.mdx",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130200459852.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130205128049.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130204648392.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130201352355.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130202434492.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130204809171.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130202126245.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130200437507.png",
     "src/content/blog/9-how-to-use-obsidian-with-astro.md",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro/20250806232346423.png",
-    "/src/styles/markdown.css",
-    "/src/styles",
+    "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130122618761.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130122442980.png",
+    "src/assets/blogs/10-how-to-use-figma-mcp-with-codex/20251130130247827.png",
+    "src/pages/fuse.json.ts",
+    "().md",
+    "src/store/searchBarStore.ts",
+    "src/store",
+    "src/components/search/SearchBar.tsx",
+    "src/components/search/SearchBtn.tsx",
+    "src/components/search",
+    "src/components/typo/Typo.tsx",
+    "src/components/typo/Typo.astro",
+    "src/components/typo/types.ts",
+    "src/components/typo",
+    "/src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
+    "/().md",
     "/src/content/blog/9-how-to-use-obsidian-with-astro.md",
-    "/src/content/blog",
-    "/src/content",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/thumbnail.jpeg",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250806232346423.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231601205.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231311800.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805231237651.jpeg",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805230305880.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805225234483.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224615164.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro/20250805224030239.png",
-    "/src/assets/blogs/9-how-to-use-obsidian-with-astro",
-    "/src/assets/blogs",
-    "/src/assets",
-    "/src",
     "Templates/blog-template.md",
     "แต่.md",
-    "src/assets/blogs/9-how-to-use-obsidian-with-astro",
     "src/content/blog/11-test.md",
     "Untitled.md",
     "src/content/blog/7-how-to-use-ai-model-deploy-on-deepinfra-with-n8n.md",
