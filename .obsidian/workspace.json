@@ -142,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "src/content/blog/10-how-to-use-figma-mcp-with-codex.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 10-how-to-use-figma-mcp-with-codex"
             }
           },
           {
