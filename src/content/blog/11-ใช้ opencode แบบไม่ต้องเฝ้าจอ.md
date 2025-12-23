@@ -187,10 +187,9 @@ opencode serve --port 4555 --hostname 0.0.0.0
 
 ทดสอบเข้าใช้งานผ่าน browser
 
+![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251224020805337.png)
 
-
-
-แต่ข้อเสียของ OpenCode Server คือ UI ยังไม่ค่อย responsive เท่าไร
+แต่ข้อเสียของ OpenCode server คือ UI ยังไม่ค่อย responsive เท่าไร
 
 เมื่อเข้าใช้งานผ่านมือถือจะค่อนข้างลำบาก บางปุ่มกดไม่ได้ หรือโดน element อื่นบัง ทำให้ใช้งานจริงไม่สะดวก
 
@@ -202,7 +201,7 @@ OpenCode Portal คือ web client สำหรับ OpenCode ที่ออ
 
 เหมาะมากสำหรับคนที่อยากสั่งงานหรือเช็กสถานะของ OpenCode จากมือถือโดยตรง
 
-#### วิธีรัน OpenCode Portal
+### วิธีรัน OpenCode Portal
 
 ทดลองรันผ่าน docker
 
