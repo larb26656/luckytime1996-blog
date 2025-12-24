@@ -6,7 +6,7 @@ type: Article
 image: ../../assets/blogs/11-how-to-use-opencode-without-monitor/thumbnail.jpeg
 tags:
   - ai
-  - agent
+  - ai agent
   - opencode
   - cli
   - notify
