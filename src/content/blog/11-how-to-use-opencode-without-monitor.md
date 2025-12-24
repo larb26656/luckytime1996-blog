@@ -3,7 +3,7 @@ title: ใช้ opencode แบบไม่ต้องเฝ้าจอ
 description: หลายคนที่เคยใช้งาน AI Agent ผ่าน IDE หรือ CLI น่าจะเคยเจอปัญหาเดียวกันอยู่บ่อย ๆ เวลาที่เราสั่งให้มันทำงานสักอย่างหนึ่ง ไม่ว่าจะเป็นการ generate โค้ด, refactor โปรเจกต์, หรือรัน task ใหญ่ๆ ก็มักจะต้องรอสักพักกว่างานจะเสร็จ
 date: 2025-12-23 18:09
 type: Article
-image: 11-ใช้ opencode แบบไม่ต้องเฝ้าจอ
+image: ../../assets/blogs/11-how-to-use-opencode-without-monitor/thumbnail.jpeg
 tags:
   - ai
   - agent
@@ -12,23 +12,24 @@ tags:
   - notify
   - ntfy
   - pub-sub
-draft: true
+draft: false
 ---
+
 หลายคนที่เคยใช้งาน AI Agent ผ่าน IDE หรือ CLI น่าจะเคยเจอปัญหาเดียวกันอยู่บ่อย ๆ
 
 เวลาที่เราสั่งให้มันทำงานสักอย่างหนึ่ง ไม่ว่าจะเป็นการ generate โค้ด, refactor โปรเจกต์, หรือรัน task ใหญ่ๆ ก็มักจะต้องรอสักพักกว่างานจะเสร็จ
 
 ระหว่างนั้น เราก็เผลอสลับหน้าจอไปทำอย่างอื่น พอสลับกลับมาเช็กอีกที บางครั้งงานก็ยังไม่เสร็จ แต่บางครั้ง… มันอาจจะเสร็จไปนานแล้ว โดยที่เราไม่รู้ตัวเลย
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251224101428672.jpg)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251224101428672.jpg)
 
 > สภาพตอนสั่ง AI รัน task แล้วนั่งรอ
 
-และนี่ก็เป็นปัญหาที่ผมเจออยู่บ่อย ๆ ตอนใช้งาน opencode ผ่าน CLI  จนเริ่มคิดว่า…
+และนี่ก็เป็นปัญหาที่ผมเจออยู่บ่อย ๆ ตอนใช้งาน opencode ผ่าน CLI จนเริ่มคิดว่า…
 
 จะดีกว่าไหม ถ้า AI Agent สามารถเตือนเราได้ทันที เมื่อมันทำงานเสร็จ?
 
-##  แจ้งเตือนเมื่อทำงานเสร็จ
+## แจ้งเตือนเมื่อทำงานเสร็จ
 
 แนวคิดหลักคือการดักจับ event ตอนที่ opencode ทำงานเสร็จ แล้วสั่งรันคำสั่งเพื่อส่งข้อความแจ้งเตือนให้เราทันที
 
@@ -38,54 +39,54 @@ draft: true
 
 1. สร้างไฟล์ plugin ที่ path ดังต่อไปนี้ `~/.config/opencode/plugin/notification.ts`
 
-``` typescript
+```typescript
 import type { Plugin } from "@opencode-ai/plugin";
 
 export const NotificationPlugin: Plugin = async ({
-	project,
-	client,
-	$,
-	directory,
-	worktree,
+  project,
+  client,
+  $,
+  directory,
+  worktree,
 }) => {
+  return {
+    event: async ({ event }) => {
+      // Send notification on session completion
+      if (event.type === "session.idle") {
+        const message = `\nOpencode [${directory}] Session completed`;
 
-return {
-		event: async ({ event }) => {
-		// Send notification on session completion
-			if (event.type === "session.idle") {
-				const message = `\nOpencode [${directory}] Session completed`;
-				
-				await notifyLocal($, message);
-			}
-		},
-	};
+        await notifyLocal($, message);
+      }
+    },
+  };
 };
 
 const notifyLocal = async ($: any, message: string): Promise<void> => {
-	await $`osascript -e 'display notification "${message}" with title "opencode"'`;
+  await $`osascript -e 'display notification "${message}" with title "opencode"'`;
 };
 ```
 
 > ในตัวอย่างนี้ผมจะใช้ osascript ซึ่งเป็นคำสั่งของ macOS ดังนั้นวิธีนี้จะใช้ได้เฉพาะบน macOS เท่านั้น ถ้าใครใช้ระบบอื่นก็สามารถเปลี่ยนไปใช้วิธีแจ้งเตือนที่เหมาะกับ platform ของตัวเองได้
 
-2. ลองทดสอบการแจ้งเตือนง่ายๆ ด้วยข้อความทักทายง่ายๆ (เพื่อให้ opencode ทำงานเสร็จเร็วๆ)
+2. ลองทดสอบการแจ้งเตือนง่ายๆ ด้วยข้อความทักทาย (เพื่อให้ opencode ทำงานเสร็จเร็วๆ)
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251223225830576.png)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251223225830576.png)
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251223225738863.png)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251223225738863.png)
 
 > เมื่อ task เสร็จจะเห็นว่ามันมีการแจ้งเตือนที่คอมของเราแล้ว
 
 แต่ถ้าเราไม่ได้อยู่ในหน้าจอคอมหล่ะทำยังไง …
 
-ก็ส่งการแจ้งเตือนเข้ามือถือด้วย ไม่ว่าจะเป็น ช่องทาง Line, Discord หรือ Telegram ก็ได้ตามที่ถนัด
+ก็ส่งการแจ้งเตือนเข้ามือถือด้วยซะเลย ไม่ว่าจะเป็น ช่องทาง Line, Discord หรือ Telegram ก็ได้ตามที่ถนัด
 
 > แต่ planform พวกนี้เวลา login ผ่านคอมบางทีมันแจ้งเตือนที่คอม แต่ไม่แจ้งเตือนในมือถือเลยไม่ตอบโจทย์สำหรับผม
 
-ผมเลยจะขอแนะนำแอปตัวหนึ่งที่นำมาช่วยรับข้อความการแจ้งเตือนผ่านมือถือ ที่ใช้ง่ายมาก และเหมาะกับสาย dev สุด ๆ
+ผมเลยจะขอแนะนำแอปตัวหนึ่งที่มาช่วยรับข้อความการแจ้งเตือนผ่านมือถือ ที่ใช้ง่ายมาก และเหมาะกับสาย dev สุด ๆ
+
 ## ntfy
 
-เป็นแอปสำหรับส่งข้อความแจ้งเตือนไปยังมือถือหรือคอมพิวเตอร์ ผ่านการเรียก HTTP request 
+เป็นแอปสำหรับส่งข้อความแจ้งเตือนไปยังมือถือหรือคอมพิวเตอร์ ผ่านการเรียก HTTP request
 
 ก่อนที่จะไปตั้งค่า ntfy เราทำความเข้าใจ concept การทำงานคร่าวๆ ของ แอปนี้กันก่อน
 
@@ -120,15 +121,15 @@ flowchart LR
 
 ### ตั้งค่า ntfy
 
-1. เปิดใช้งาน app จะพบกับหน้าจอ Subscribed topics ให้กดปุ่ม `+` เพื่อเพิ่ม topic ที่ต้องการรับแจ้งเตือน
+1. เปิดใช้แอป จะพบกับหน้าจอ Subscribed topics ให้กดปุ่ม `+` เพื่อเพิ่ม topic ที่ต้องการรับแจ้งเตือน
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251223190303743.png)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251223190303743.png)
 
- 2. กรอกชื่อ topic แล้วกดปุ่ม Subscribe
+2.  กรอกชื่อ topic แล้วกดปุ่ม `Subscribe`
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251223201834779.png)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251223201834779.png)
 
-> แนะนำให้ตั้งชื่อที่คิดว่าจะไม่ซ้ำกับคนอื่น เพราะใน version free topic เราจะไม่สามารถตั้งเป็น private ได้ ทำให้คนอื่นสามารถ publish และ subscribe ได้เหมือนกัน
+> แนะนำให้ตั้งชื่อที่คิดว่าจะไม่ซ้ำกับคนอื่น เพราะแอพ version free เราจะไม่สามารถตั้ง topic เป็น private ได้ ทำให้คนอื่นสามารถ publish และ subscribe ได้เหมือนกัน
 
 3. ทำการลองส่ง curl เพื่อทดสอบว่าข้อมูลแจ้งเตือนเข้ามือถือไหม
 
@@ -138,7 +139,7 @@ curl -d "งานเสร็จแล้ว ✅" https://ntfy.sh/my_topic
 
 4. ปรับ script plugin notify เพื่อให้ส่งข้อความแจ้งเตือนไปยังคอม และมือถือ
 
-``` typescript
+```typescript
 import type { Plugin } from "@opencode-ai/plugin";
 
 export const NotificationPlugin: Plugin = async ({
@@ -156,7 +157,7 @@ export const NotificationPlugin: Plugin = async ({
 
         await Promise.all([
           notifyLocal($, message),
-          notifyToIphone("my-opencode-notify", message),
+          notifyToIphone("my_topic", message),
         ]);
       }
     },
@@ -171,7 +172,7 @@ const notifyLocal = async ($: any, message: string): Promise<void> => {
 
 const notifyToIphone = async (
   topic: string,
-  message: string,
+  message: string
 ): Promise<void> => {
   await fetch(`https://ntfy.sh/${topic}`, {
     method: "POST",
@@ -187,47 +188,47 @@ const notifyToIphone = async (
 
 ## สั่งงานผ่านมือถือ
 
-ใน opencode มี feature ที่ทำการรัน opencode แบบ server ได้ ซึ่งสามารถใช้งาน opencode ผ่าน browser ได้เลย 
+ใน opencode มี feature ที่ทำการรัน opencode แบบ server ได้ ซึ่งสามารถใช้งาน opencode ผ่าน browser ได้เลย
 
 ### เปิด Opencode server
 
-ทำการรัน opencode server ด้วยคำสั่ง
+1. ทำการรัน opencode server ด้วยคำสั่ง
 
-``` bash
+```bash
 opencode serve --port 4555 --hostname 0.0.0.0
 ```
 
-ทดสอบเข้าใช้งานผ่าน browser
+2. ทดสอบเข้าใช้งานผ่าน browser
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251224020805337.png)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251224020805337.png)
 
-> เมื่อลองใช้งานดู จะพบว่ามันสามารถ สั่งงาน opencode ผ่าน browser ได้เหมือน cli เลบ
+> เมื่อลองใช้งานดู จะพบว่าสามารถสั่งงาน opencode ผ่าน browser ได้เหมือนใช้งานผ่าน cli เลย
 
-แต่ข้อเสียของ OpenCode server คือ UI ยังไม่ค่อย responsive เท่าไร
+แต่ข้อเสียของ Opencode server คือ UI ยังไม่ค่อย responsive เท่าไร
 
 เมื่อเข้าใช้งานผ่านมือถือ จะค่อนข้างใช้งานลำบาก บางปุ่มกดไม่ได้ หรือโดน element อื่นบัง ทำให้ใช้งานจริงไม่สะดวก
 
 โชคดีที่มีคนเจอปัญหานี้เหมือนกัน เลยพัฒนา web client ที่ optmize UI สำหรับการใช้งานบนมือถือโดยเฉพาะ
 
-### OpenCode Portal
+### Opencode Portal
 
-OpenCode Portal คือ web client สำหรับ OpenCode ที่ออกแบบมาโดยโฟกัสที่การใช้งานบนมือถือเป็นหลัก
+Opencode Portal คือ web client สำหรับ Opencode ที่ออกแบบมาโดยโฟกัสที่การใช้งานบนมือถือเป็นหลัก
 
-เหมาะมากสำหรับคนที่อยากสั่งงาน หรือเช็กสถานะของ OpenCode จากมือถือโดยตรง
+เหมาะมากสำหรับคนที่อยากสั่งงาน หรือเช็กสถานะของ Opencode จากมือถือโดยตรง
 
-### วิธีรัน OpenCode Portal
+### รัน Opencode Portal
 
 1. ทดลองรันผ่าน docker
 
-``` bash
+```bash
 docker run -p 4256:3000 \
   -e OPENCODE_SERVER_URL=http://host.docker.internal:4555 \
   ghcr.io/hosenur/portal:latest
-````
+```
 
 2. ทดสอบเข้าใช้งานผ่าน browser
 
-![](../../assets/blogs/11-ใช้%20opencode%20แบบไม่ต้องเฝ้าจอ/20251224015632390.png)
+![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251224015632390.png)
 
 > โดยการทำงาน จะทำได้เหมือนกับ web client ของ official เลย แต่ UI ใช้งานได้ง่ายขึ้นเยอะ~
 
@@ -239,8 +240,8 @@ docker run -p 4256:3000 \
 เพื่อแก้ปัญหานี้ เราสามารถ เขียน bash script เพื่อรวมทั้งสองคำสั่งให้รันพร้อมกันได้ในครั้งเดียว
 
 โดยจากเดิมที่ต้องพิมพ์สองคำสั่ง ก็จะเหลือเพียงแค่รัน script ตัวเดียวเท่านั้น เช่นตัวอย่างด้านล่างนี้
-``
-``` bash
+
+```bash
 #!/usr/bin/env bash
 set -e
 
@@ -295,7 +296,7 @@ wait
 
 สำหรับการใช้งานทั่วไปภายใน network เดียวกัน ก็สามารถใช้งานได้ตามปกติอยู่แล้ว
 
-แต่ถ้าใครอยากต่อยอดให้สามารถสั่งงานจากนอกบ้านได้บ้าง ก็ยังมีทางเลือกอื่นให้ใช้งาน เช่น การใช้ Cloudflare Tunnel หรือ Tailscale เพื่อเปิดทางให้เข้าถึง opencode จากภายนอกได้สะดวกขึ้น
+แต่ถ้าใครอยากต่อยอดให้สามารถสั่งงานจากนอกบ้านได้ ก็ยังมีทางเลือกอื่นให้ใช้งาน เช่น การใช้ Cloudflare Tunnel หรือ Tailscale เพื่อเปิดทางให้เข้าถึง opencode จากภายนอกได้สะดวกขึ้น
 
 > อย่างไรก็ตาม จุดนี้อาจต้องระวังเรื่อง security เพิ่มเติมเล็กน้อย เพราะถ้าสามารถเข้าถึง opencode จากภายนอกได้โดยไม่มีระบบ authentication ที่เหมาะสม ก็มีความเสี่ยงที่ใครบางคนจะเข้ามาสั่งรันสคริปต์แปลก ๆ บนเครื่องของเราได้เช่นกัน
 
