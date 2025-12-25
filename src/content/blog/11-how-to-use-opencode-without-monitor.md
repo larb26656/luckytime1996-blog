@@ -226,7 +226,7 @@ docker run -p 4256:3000 \
   ghcr.io/hosenur/portal:latest
 ```
 
-2. ทดสอบเข้าใช้งานผ่าน browser
+2. ทดสอบเข้าใช้งานผ่าน browser บนมือถือ
 
 ![](../../assets/blogs/11-how-to-use-opencode-without-monitor/20251224015632390.png)
 
