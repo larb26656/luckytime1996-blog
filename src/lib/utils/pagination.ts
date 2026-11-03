@@ -15,7 +15,7 @@ export function buildPaginationParams<T, P extends Record<string, any> = {}>(
   pageSize: number,
   extraParams?: P
 ): {
-  params: { page: number } & P;
+  params: { page: string } & P;
   props: { items: T[]; previousPage?: number; nextPage?: number };
 }[] {
   const totalPage = getTotalPages(items, pageSize);
@@ -26,7 +26,7 @@ export function buildPaginationParams<T, P extends Record<string, any> = {}>(
     const nextPage = page < totalPage ? page + 1 : undefined;
 
     return {
-      params: { page, ...extraParams } as { page: number } & P,
+      params: { page: String(page), ...extraParams } as { page: string } & P,
       props: {
         items: getByPage(items, page, pageSize),
         previousPage: previousPage,
