@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -17,7 +18,11 @@ export default defineConfig({
   site: "https://blog.luckytime1996.dev",
   integrations: [mdx(), sitemap(), icon(), react()],
   markdown: {
-    remarkPlugins: [remarkPele],
+    processor: unified({
+      remarkPlugins: [remarkPele],
+      gfm: true,
+      smartypants: true,
+    }),
   },
   vite: {
     plugins: [tailwindcss()],
