@@ -6,8 +6,8 @@ import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import path from "path";
 import { fileURLToPath } from "url";
-import remarkMermaid from "remark-mermaidjs";
 import react from "@astrojs/react";
+import remarkPele from "./src/plugins/remark-pele.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,9 +17,7 @@ export default defineConfig({
   site: "https://blog.luckytime1996.dev",
   integrations: [mdx(), sitemap(), icon(), react()],
   markdown: {
-    remarkPlugins: [
-      remarkMermaid
-    ],
+    remarkPlugins: [remarkPele],
   },
   vite: {
     plugins: [tailwindcss()],
